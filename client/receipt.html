@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Application Receipt</title>
+
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- PDF -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+  <link rel="stylesheet" href="css/receipt.css" />
+  <link rel="stylesheet" href="./css/global.css">
+</head>
+
+<body>
+  <!-- ====================================
+    RECEIPT PAGE
+    ==================================== -->
+
+  <div class="receipt-page">
+    <!-- TOP -->
+
+    <div class="top-bar"></div>
+
+    <!-- HEADER -->
+
+    <div class="receipt-header">
+      <div class="govt-info">
+        <h1>🇮🇳 Free Yojana Registration Portal</h1>
+
+        <p>
+          Government Beneficiary Verification Receipt<br />
+          Digital Registration & Application System 2026
+        </p>
+      </div>
+
+      <div class="receipt-status">
+        <div class="status-badge">✓ Registration Successful</div>
+
+        <div class="receipt-id-box">
+          <span> Registration ID </span>
+
+          <h2 id="registrationId">Loading...</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- BODY -->
+
+    <div class="receipt-body">
+      <h2 class="section-title">Candidate Application Details</h2>
+
+      <div class="candidate-section">
+        <!-- PHOTO -->
+
+        <div class="photo-card">
+          <img id="candidatePhoto" src="" alt="Candidate Photo" />
+
+          <h3>Candidate Photo</h3>
+        </div>
+
+        <!-- DETAILS -->
+
+        <div class="details-grid">
+          <div class="detail-box">
+            <span>Full Name</span>
+            <h4 id="candidateName"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Father Name</span>
+            <h4 id="fatherName"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Mother Name</span>
+            <h4 id="motherName"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Mobile Number</span>
+            <h4 id="candidateMobile"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Email Address</span>
+            <h4 id="candidateEmail"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Date Of Birth</span>
+            <h4 id="candidateDob"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Gender</span>
+            <h4 id="candidateGender"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Category</span>
+            <h4 id="candidateCategory"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Nationality</span>
+            <h4 id="candidateNationality"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>State</span>
+            <h4 id="candidateState"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>District</span>
+            <h4 id="candidateDistrict"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Qualification</span>
+            <h4 id="candidateQualification"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Scheme</span>
+            <h4 id="candidateScheme"></h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Application Status</span>
+            <h4>Registration Successful</h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Payment Status</span>
+            <h4>Paid</h4>
+          </div>
+
+          <div class="detail-box">
+            <span>Submission Date</span>
+            <h4 id="submissionDate"></h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- VERIFICATION -->
+
+      <div class="verification-box">
+        <h3>Verification Notice</h3>
+
+        <p>
+          कृपया इस रसीद को सुरक्षित रखें। भविष्य में आवेदन स्थिति, भुगतान
+          सत्यापन एवं अंतिम चयन हेतु Registration ID की आवश्यकता होगी।
+        </p>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="receipt-footer">
+      <div class="footer-left">
+        <p>
+          © 2026 Free Yojana Portal<br />
+          Official Beneficiary Registration System
+        </p>
+      </div>
+
+      <div class="receipt-actions">
+
+        <button class="receipt-btn download-btn" onclick="downloadReceipt()">
+
+          Download PDF
+
+        </button>
+
+        <button class="receipt-btn print-btn" onclick="window.print()">
+
+          Print
+
+        </button>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- HTML2PDF -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+
+/* ================================
+GET LOCAL DATA
+================================ */
+
+const studentData =
+JSON.parse(
+localStorage.getItem(
+"candidateData"
+)
+);
+
+/* ================================
+CHECK DATA
+================================ */
+
+if(studentData){
+
+document.getElementById(
+"registrationId"
+).innerText =
+studentData.registrationId || "N/A";
+
+document.getElementById(
+"candidateName"
+).innerText =
+studentData.fullName || "N/A";
+
+document.getElementById(
+"fatherName"
+).innerText =
+studentData.fatherName || "N/A";
+
+document.getElementById(
+"motherName"
+).innerText =
+studentData.motherName || "N/A";
+
+document.getElementById(
+"candidateMobile"
+).innerText =
+studentData.mobile || "N/A";
+
+document.getElementById(
+"candidateEmail"
+).innerText =
+studentData.email || "N/A";
+
+document.getElementById(
+"candidateDob"
+).innerText =
+studentData.dateOfBirth || "N/A";
+
+document.getElementById(
+"candidateGender"
+).innerText =
+studentData.gender || "N/A";
+
+document.getElementById(
+"candidateCategory"
+).innerText =
+studentData.category || "N/A";
+
+document.getElementById(
+"candidateNationality"
+).innerText =
+studentData.nationality || "Indian";
+
+document.getElementById(
+"candidateState"
+).innerText =
+studentData.state || "N/A";
+
+document.getElementById(
+"candidateDistrict"
+).innerText =
+studentData.district || "N/A";
+
+document.getElementById(
+"candidateQualification"
+).innerText =
+studentData.qualification || "N/A";
+
+document.getElementById(
+"candidateScheme"
+).innerText =
+studentData.scheme || "Free Yojana";
+
+document.getElementById(
+"submissionDate"
+).innerText =
+studentData.submissionDate || "N/A";
+
+/* PHOTO */
+
+if(studentData.passportPhoto){
+
+document.getElementById(
+"candidatePhoto"
+).src =
+`http://localhost:5000/uploads/${studentData.passportPhoto}`;
+
+}
+
+}else{
+
+alert(
+"No Registration Data Found"
+);
+
+window.location.href =
+"./details-form.html";
+
+}
+
+/* ================================
+DOWNLOAD PDF
+================================ */
+
+function downloadReceipt(){
+
+const element =
+document.querySelector(
+".receipt-page"
+);
+
+const options = {
+
+margin:0,
+
+filename:
+`Receipt-${studentData.registrationId}.pdf`,
+
+image:{
+type:"jpeg",
+quality:1
+},
+
+html2canvas:{
+scale:2,
+useCORS:true,
+scrollY:0
+},
+
+jsPDF:{
+unit:"mm",
+format:"a4",
+orientation:"portrait"
+}
+
+};
+
+html2pdf()
+.from(element)
+.set(options)
+.save();
+
+}
+
+</script>
+</body>
+
+</html>

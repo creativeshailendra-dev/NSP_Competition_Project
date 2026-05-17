@@ -1,0 +1,878 @@
+/* ====================================
+        RESET
+        ==================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ====================================
+        BODY
+        ==================================== */
+
+body {
+  background: #eef2f7;
+  padding: 40px 20px;
+}
+
+/* =========================================
+   FINAL A4 RECEIPT FIX
+========================================= */
+
+/* ====================================
+   FINAL A4 SIZE FIX
+==================================== */
+
+.receipt-page {
+
+  width: 190mm;
+
+  margin: auto;
+
+  background: #ffffff;
+
+  padding: 10mm;
+
+  box-sizing: border-box;
+
+}
+
+/* ====================================
+   COMPACT RECEIPT
+==================================== */
+
+.receipt-header {
+
+  padding: 15px 20px !important;
+
+}
+
+.govt-info h1 {
+
+  font-size: 26px !important;
+
+}
+
+.receipt-body {
+
+  padding: 18px !important;
+
+}
+
+.section-title {
+
+  font-size: 20px !important;
+
+  margin-bottom: 15px !important;
+
+}
+
+.candidate-section {
+
+  gap: 18px !important;
+
+  margin-bottom: 20px !important;
+
+}
+
+.details-grid {
+
+  gap: 8px !important;
+
+}
+
+.detail-box {
+
+  padding: 8px !important;
+
+}
+
+.detail-box h4 {
+
+  font-size: 13px !important;
+
+}
+
+.verification-box {
+
+  padding: 12px !important;
+
+  margin-top: 18px !important;
+
+}
+
+.verification-box p {
+
+  font-size: 13px !important;
+
+  line-height: 1.5 !important;
+
+}
+
+.receipt-footer {
+
+  padding: 12px 18px !important;
+
+}
+
+/* ====================================
+   PHOTO FIX
+==================================== */
+
+.photo-card img {
+
+  width: 100%;
+
+  height: 140px !important;
+
+  object-fit: contain;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+}
+
+/* ====================================
+   BUTTONS
+==================================== */
+
+.action-buttons {
+
+  display: flex;
+
+  gap: 12px;
+
+  justify-content: flex-end;
+
+}
+
+.action-btn {
+
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+}
+
+.download-btn {
+
+  background: #ea580c;
+
+  color: white;
+
+}
+
+.print-btn {
+
+  background: #0f172a;
+
+  color: white;
+
+}
+
+/* ====================================
+   PRINT
+==================================== */
+
+@media print {
+
+  body {
+
+    padding: 0 !important;
+
+    background: white !important;
+
+  }
+
+  .action-buttons {
+
+    display: none !important;
+
+  }
+
+  .receipt-page {
+
+    width: 210mm !important;
+
+    margin: 0 !important;
+
+    padding: 8mm !important;
+
+  }
+
+}
+
+
+/* =========================================
+   PHOTO SIZE
+========================================= */
+
+.photo-box {
+
+  height: 120px !important;
+
+}
+
+.photo-box img {
+
+  height: 90px !important;
+
+  object-fit: cover;
+
+}
+
+/* =========================================
+   DETAIL BOX
+========================================= */
+
+.detail-box {
+
+  padding: 6px !important;
+
+}
+
+.application-grid {
+
+  gap: 6px !important;
+
+}
+
+
+/* ====================================
+        TOP BAR
+        ==================================== */
+
+.top-bar {
+  height: 8px;
+
+  background: linear-gradient(to right, #ff6b00, #16a34a, #2563eb);
+}
+
+/* ====================================
+        HEADER
+        ==================================== */
+
+.receipt-header {
+  padding: 25px 30px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+/* ====================================
+        GOVT INFO
+        ==================================== */
+
+.govt-info h1 {
+  font-size: 34px;
+
+  color: #0f172a;
+
+  margin-bottom: 10px;
+}
+
+.govt-info p {
+  color: #64748b;
+
+  line-height: 1.8;
+}
+
+/* ====================================
+        STATUS
+        ==================================== */
+
+.receipt-status {
+  text-align: right;
+}
+
+.status-badge {
+  display: inline-block;
+
+  padding: 12px 20px;
+
+  background: #dcfce7;
+
+  color: #166534;
+
+  border-radius: 12px;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+/* ====================================
+        ID BOX
+        ==================================== */
+
+.receipt-id-box {
+  background: #eff6ff;
+
+  border: 2px solid #bfdbfe;
+
+  padding: 18px 24px;
+
+  border-radius: 18px;
+}
+
+.receipt-id-box span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  margin-bottom: 6px;
+}
+
+.receipt-id-box h2 {
+  color: #1d4ed8;
+
+  font-size: 28px;
+
+  font-weight: 800;
+}
+
+/* ====================================
+        BODY
+        ==================================== */
+
+.receipt-body {
+  padding: 30px;
+}
+
+/* ====================================
+        TITLE
+        ==================================== */
+
+.section-title {
+  font-size: 24px;
+
+  color: #0f172a;
+
+  margin-bottom: 25px;
+}
+
+/* ====================================
+        CANDIDATE SECTION
+        ==================================== */
+
+.candidate-section {
+  display: grid;
+
+  grid-template-columns: 220px 1fr;
+
+  gap: 35px;
+
+  margin-bottom: 40px;
+}
+
+/* ====================================
+        PHOTO CARD
+        ==================================== */
+
+.photo-card {
+  border: 2px dashed #cbd5e1;
+
+  border-radius: 20px;
+
+  padding: 15px;
+
+  text-align: center;
+
+  background: #f8fafc;
+}
+
+.photo-card img {
+  width: 100%;
+
+  height: 180px;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+
+  margin-bottom: 10px;
+}
+
+.photo-card h3 {
+  color: #0f172a;
+}
+
+/* ====================================
+        DETAILS GRID
+        ==================================== */
+
+.details-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+}
+
+/* ====================================
+        DETAIL BOX
+        ==================================== */
+
+.detail-box {
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 12px;
+
+  padding: 12px;
+}
+
+.detail-box span {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  margin-bottom: 8px;
+}
+
+.detail-box h4 {
+  color: #0f172a;
+
+  font-size: 14px;
+
+  word-break: break-word;
+}
+
+/* ====================================
+        VERIFICATION
+        ==================================== */
+
+.verification-box {
+  background: #fff7ed;
+
+  border: 1px solid #fdba74;
+
+  padding: 22px;
+
+  border-radius: 18px;
+
+  margin-top: 35px;
+}
+
+.verification-box h3 {
+  color: #9a3412;
+
+  margin-bottom: 10px;
+}
+
+.verification-box p {
+  color: #7c2d12;
+
+  line-height: 1.8;
+}
+
+/* ====================================
+        FOOTER
+        ==================================== */
+
+.receipt-footer {
+  border-top: 1px solid #e2e8f0;
+
+  padding: 30px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+
+.footer-left p {
+  color: #64748b;
+
+  line-height: 1.8;
+}
+
+/* ====================================
+   FINAL BUTTON FIX
+==================================== */
+
+.action-buttons {
+
+  display: flex;
+
+  gap: 15px;
+
+  justify-content: flex-end;
+
+  margin-top: 20px;
+
+}
+
+.action-btn {
+
+  border: none;
+
+  padding: 14px 24px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+}
+
+.download-btn {
+
+  background: #ea580c;
+
+  color: #ffffff;
+
+}
+
+.print-btn {
+
+  background: #0f172a;
+
+  color: #ffffff;
+
+}
+
+.action-btn:hover {
+
+  transform: translateY(-2px);
+
+  opacity: 0.9;
+
+}
+
+/* ====================================
+   FINAL PRINT FIX
+==================================== */
+
+@media print {
+
+  body {
+
+    background: #ffffff !important;
+
+    padding: 0 !important;
+
+  }
+
+  .action-buttons {
+
+    display: none !important;
+
+  }
+
+  .receipt-page {
+
+    width: 210mm !important;
+
+    height: 297mm !important;
+
+    overflow: hidden !important;
+
+    page-break-after: avoid !important;
+
+  }
+
+}
+
+/* =========================
+RECEIPT BUTTONS
+========================= */
+
+.receipt-actions{
+
+  display:flex;
+
+  gap:16px;
+
+  margin-top:20px;
+
+}
+
+.receipt-btn{
+
+  border:none;
+
+  outline:none;
+
+  padding:14px 28px;
+
+  border-radius:12px;
+
+  font-size:16px;
+
+  font-weight:600;
+
+  font-family:'Poppins', sans-serif;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+
+}
+
+/* DOWNLOAD BUTTON */
+
+.download-btn{
+
+  background:#ff6b00;
+
+  color:#fff;
+
+  box-shadow:
+  0 10px 30px rgba(255,107,0,0.3);
+
+}
+
+.download-btn:hover{
+
+  transform:translateY(-3px);
+
+}
+
+/* PRINT BUTTON */
+
+.print-btn{
+
+  background:#111827;
+
+  color:#fff;
+
+}
+
+.print-btn:hover{
+
+  transform:translateY(-3px);
+
+}
+
+/* ==================================== */
+/* FINAL MOBILE RESPONSIVE */
+/* ==================================== */
+
+@media(max-width:768px){
+
+body{
+
+padding:10px;
+
+overflow-x:hidden;
+
+}
+
+/* MAIN RECEIPT */
+
+.receipt-page{
+
+width:100%;
+
+padding:14px;
+
+overflow:hidden;
+
+}
+
+/* HEADER */
+
+.receipt-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+padding:18px 14px !important;
+
+gap:18px;
+
+}
+
+/* GOVT TITLE */
+
+.govt-info h1{
+
+font-size:22px !important;
+
+line-height:1.4;
+
+}
+
+.govt-info p{
+
+font-size:13px;
+
+line-height:1.6;
+
+}
+
+/* STATUS */
+
+.receipt-status{
+
+width:100%;
+
+text-align:left;
+
+}
+
+.receipt-id-box{
+
+width:100%;
+
+}
+
+.receipt-id-box h2{
+
+font-size:20px;
+
+word-break:break-word;
+
+}
+
+/* BODY */
+
+.receipt-body{
+
+padding:16px !important;
+
+}
+
+/* TITLE */
+
+.section-title{
+
+font-size:18px !important;
+
+}
+
+/* CANDIDATE SECTION */
+
+.candidate-section{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+/* PHOTO */
+
+.photo-card{
+
+width:100%;
+
+}
+
+.photo-card img{
+
+height:150px !important;
+
+object-fit:contain;
+
+}
+
+/* GRID */
+
+.details-grid{
+
+grid-template-columns:1fr;
+
+gap:10px !important;
+
+}
+
+/* DETAIL BOX */
+
+.detail-box{
+
+padding:12px !important;
+
+}
+
+.detail-box h4{
+
+font-size:14px !important;
+
+line-height:1.5;
+
+word-break:break-word;
+
+}
+
+/* VERIFICATION */
+
+.verification-box{
+
+padding:16px !important;
+
+}
+
+.verification-box p{
+
+font-size:13px !important;
+
+line-height:1.7;
+
+}
+
+/* FOOTER */
+
+.receipt-footer{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+padding:18px 14px !important;
+
+}
+
+/* BUTTONS */
+
+.receipt-actions{
+
+width:100%;
+
+flex-direction:column;
+
+}
+
+.receipt-btn{
+
+width:100%;
+
+font-size:15px;
+
+}
+
+}

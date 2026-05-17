@@ -1,0 +1,60 @@
+/* =====================================
+/* =====================================
+COMMON BUTTON
+===================================== */
+
+.primary-btn {
+
+    border: none;
+
+    outline: none;
+
+    background: var(--primary-gradient);
+
+    color: #ffffff;
+
+    padding: 14px 24px;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* =====================================
+COMMON CARD
+===================================== */
+
+.common-card {
+
+    background: var(--card-bg);
+
+    border-radius: var(--radius);
+
+    box-shadow: var(--shadow);
+
+    padding: 30px;
+}
+
+/* =====================================
+SECTION TITLE
+===================================== */
+
+.section-title h2 {
+
+    font-size: 28px;
+
+    margin-bottom: 8px;
+}
+
+.section-title p {
+
+    color: var(--text-light);
+}

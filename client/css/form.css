@@ -1,0 +1,721 @@
+/* =========================================
+GOOGLE FONT
+========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================
+RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f8fafc;
+  overflow-x: hidden;
+  color: #0f172a;
+}
+
+/* =========================================
+PAGE WRAPPER
+========================================= */
+
+.basic-form-page {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* =========================================
+LEFT SIDE
+========================================= */
+
+.form-left {
+  position: relative;
+
+  background: url("../assets/images/background.png");
+
+  background-size: cover;
+  background-position: center;
+
+  padding: 70px 8%;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+/* OVERLAY */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom right,
+    rgba(15, 23, 42, 0.92),
+    rgba(15, 23, 42, 0.76)
+  );
+}
+
+/* CONTENT */
+
+.left-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+}
+
+/* TAG */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 24px;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(12px);
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  margin-bottom: 32px;
+}
+
+/* TITLE */
+
+.left-content h1 {
+  font-size: 68px;
+
+  line-height: 1.1;
+
+  color: white;
+
+  font-weight: 800;
+
+  margin-bottom: 28px;
+}
+
+/* DESCRIPTION */
+
+.left-content p {
+  color: #cbd5e1;
+
+  font-size: 19px;
+
+  line-height: 1.9;
+
+  max-width: 620px;
+
+  margin-bottom: 40px;
+}
+
+/* FEATURE LIST */
+
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  margin-bottom: 45px;
+}
+
+/* FEATURE ITEM */
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ICON */
+
+.feature-item i {
+  color: #ff9800;
+
+  font-size: 20px;
+}
+
+/* LEFT IMAGE */
+
+.left-image {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.left-image img {
+  width: 100%;
+  max-width: 520px;
+
+  object-fit: contain;
+
+  filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.25));
+}
+
+/* =========================================
+RIGHT SIDE
+========================================= */
+
+.form-right {
+  background: #ffffff;
+
+  padding: 70px 8%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* HEADER */
+
+.form-header {
+  margin-bottom: 40px;
+}
+
+/* STEP BADGE */
+
+.step-badge {
+  display: inline-block;
+
+  padding: 10px 18px;
+
+  border-radius: 50px;
+
+  background: #fff7ed;
+
+  color: #ea580c;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+/* TITLE */
+
+.form-header h2 {
+  font-size: 44px;
+
+  color: #0f172a;
+
+  margin-bottom: 14px;
+}
+
+/* TEXT */
+
+.form-header p {
+  color: #64748b;
+
+  line-height: 1.8;
+
+  font-size: 16px;
+}
+
+/* =========================================
+FORM
+========================================= */
+
+.basic-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* FORM ROW */
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+/* INPUT GROUP */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABEL */
+
+.input-group label {
+  margin-bottom: 10px;
+
+  color: #0f172a;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* =========================================
+INPUT BOX
+========================================= */
+
+.input-box {
+  position: relative;
+}
+
+/* ICON */
+
+.input-box i {
+  position: absolute;
+
+  top: 50%;
+  left: 18px;
+
+  transform: translateY(-50%);
+
+  color: #94a3b8;
+
+  font-size: 16px;
+}
+
+/* INPUT */
+
+.input-box input,
+.input-box select {
+  width: 100%;
+
+  height: 58px;
+
+  padding-left: 52px;
+  padding-right: 18px;
+
+  border-radius: 18px;
+
+  border: 1px solid #dbe2ea;
+
+  background: #f8fafc;
+
+  outline: none;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+/* FULL WIDTH ROW */
+
+.full-width-row{
+
+    display:block;
+
+}
+
+/* FOCUS */
+
+.input-box input:focus,
+.input-box select:focus {
+  border-color: #ff9800;
+
+  background: white;
+
+  box-shadow: 0 0 0 4px rgba(255, 152, 0, 0.12);
+}
+
+/* =========================================
+ERROR TEXT
+========================================= */
+
+.error-text {
+  color: #ef4444;
+
+  font-size: 13px;
+
+  margin-top: 8px;
+
+  min-height: 18px;
+}
+
+/* =========================================
+CHECKBOX
+========================================= */
+
+.checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  margin-top: 5px;
+}
+
+/* CHECKBOX */
+
+.checkbox-group input {
+  width: 18px;
+  height: 18px;
+
+  accent-color: #ff9800;
+
+  margin-top: 3px;
+}
+
+/* TEXT */
+
+.checkbox-group label {
+  color: #475569;
+
+  line-height: 1.7;
+
+  font-size: 14px;
+}
+
+/* =========================================
+BUTTON
+========================================= */
+
+.continue-btn {
+  width: 100%;
+
+  height: 60px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: linear-gradient(135deg, #ff9800, #ff6f00);
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.35s;
+
+  box-shadow: 0 18px 35px rgba(255, 152, 0, 0.22);
+
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* HOVER */
+
+.continue-btn:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 25px 40px rgba(255, 152, 0, 0.28);
+}
+
+/* =========================================
+SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff9800;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+/* =========================================
+LEFT SIDE PREMIUM BACKGROUND
+========================================= */
+
+.form-left {
+  position: relative;
+
+  padding: 70px 8%;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #020617 0%, #0f172a 35%, #1e293b 100%);
+}
+
+/* =========================================
+PREMIUM OVERLAY
+========================================= */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(255, 152, 0, 0.22),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(249, 115, 22, 0.18),
+      transparent 28%
+    ),
+    linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.02),
+      rgba(255, 255, 255, 0.01)
+    );
+}
+
+/* =========================================
+GLOW CIRCLE 1
+========================================= */
+
+.form-left::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(255, 152, 0, 0.35), transparent 70%);
+
+  top: -120px;
+  left: -120px;
+
+  filter: blur(25px);
+
+  animation: floatGlow 8s ease-in-out infinite;
+}
+
+/* =========================================
+GLOW CIRCLE 2
+========================================= */
+
+.form-left::after {
+  content: "";
+
+  position: absolute;
+
+  width: 340px;
+  height: 340px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.2), transparent 70%);
+
+  bottom: -100px;
+  right: -100px;
+
+  filter: blur(30px);
+
+  animation: floatGlow2 10s ease-in-out infinite;
+}
+
+/* =========================================
+ANIMATION
+========================================= */
+
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(25px) translateX(15px);
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes floatGlow2 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(-15px);
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+.left-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  padding: 50px;
+
+  border-radius: 40px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(16px);
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================
+FLOATING BOX
+========================================= */
+
+.magic-box {
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(12px);
+
+  animation: floatBox 7s ease-in-out infinite;
+}
+
+.magic-box.one {
+  top: 80px;
+  right: 70px;
+}
+
+.magic-box.two {
+  bottom: 80px;
+  left: 60px;
+
+  width: 90px;
+  height: 90px;
+
+  animation-delay: 2s;
+}
+
+@keyframes floatBox {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-18px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+  .left-content h1 {
+    font-size: 54px;
+  }
+}
+
+@media (max-width: 992px) {
+  .basic-form-page {
+    grid-template-columns: 1fr;
+  }
+
+  .form-left {
+    min-height: 700px;
+  }
+
+  .left-content {
+    text-align: center;
+  }
+
+  .left-content p {
+    margin: auto;
+    margin-bottom: 40px;
+  }
+
+  .feature-item {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-left,
+  .form-right {
+    padding: 60px 6%;
+  }
+
+  .left-content h1 {
+    font-size: 42px;
+  }
+
+  .form-header h2 {
+    font-size: 34px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .left-content h1 {
+    font-size: 34px;
+  }
+
+  .left-content p {
+    font-size: 16px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 12px 18px;
+  }
+
+  .form-header h2 {
+    font-size: 28px;
+  }
+
+  .input-box input,
+  .input-box select {
+    height: 54px;
+  }
+
+  .continue-btn {
+    height: 56px;
+    font-size: 15px;
+  }
+}

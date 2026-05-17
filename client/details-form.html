@@ -1,0 +1,1368 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- BASIC -->
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- TITLE -->
+
+  <title>Free Smartphone Yojana Registration</title>
+
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="./css/details-form.css" />
+</head>
+<link rel="stylesheet" href="./css/global.css">
+
+<body>
+  <!-- ========================= -->
+  <!-- PAGE -->
+  <!-- ========================= -->
+
+  <main class="details-page">
+    <!-- ========================= -->
+    <!-- LEFT SIDEBAR -->
+    <!-- ========================= -->
+
+    <aside class="sidebar">
+      <div class="sidebar-overlay"></div>
+
+      <div class="sidebar-content">
+        <span class="sidebar-tag"> 🇮🇳 Government Registration Portal </span>
+
+        <h1>
+          <span id="schemeHeading"> Free Smartphone Yojana 2026 </span>
+        </h1>
+
+        <p id="schemeParagraph">
+          भारत सरकार द्वारा युवाओं को डिजिटल रूप से सशक्त बनाने हेतु विशेष
+          योजना।
+        </p>
+
+        <!-- STEPS -->
+
+        <div class="steps-list">
+          <div class="step-item active-step">
+            ✅ Basic Registration Completed
+          </div>
+
+          <div class="step-item">📝 Candidate Verification Form</div>
+
+          <div class="step-item">📄 Document Verification</div>
+
+          <div class="step-item">🏆 Final Approval</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ========================= -->
+    <!-- RIGHT SIDE -->
+    <!-- ========================= -->
+
+    <section class="details-right">
+      <!-- HEADER -->
+
+      <div class="details-header">
+        <span class="step-badge"> STEP 2 OF 2 </span>
+
+        <h2>Candidate Verification Form</h2>
+
+        <p>कृपया सभी जानकारी सही तरीके से भरें।</p>
+      </div>
+
+      <!-- FORM -->
+
+      <form class="details-form" id="registrationForm" enctype="multipart/form-data">
+        <!-- ========================= -->
+        <!-- PERSONAL DETAILS -->
+        <!-- ========================= -->
+
+        <div class="form-section personal-section">
+          <!-- BACKGROUND SHAPE -->
+
+          <div class="section-bg-shape"></div>
+
+          <!-- TOP HEADER -->
+
+          <div class="section-top">
+            <!-- LEFT -->
+
+            <div class="section-info">
+              <!-- ICON IMAGE -->
+
+              <div class="section-image">
+                <!-- SVG / PNG IMAGE -->
+
+                <img src="./assets/icons/personal-center-svgrepo-com.svg" alt="Personal Details" />
+              </div>
+
+              <!-- TEXT -->
+
+              <div class="section-text">
+                <span class="section-mini-tag"> Candidate Information </span>
+
+                <h3>Personal Details</h3>
+
+                <p>Fill your official personal information carefully.</p>
+              </div>
+            </div>
+
+            <!-- RIGHT DECORATION -->
+
+            <div class="section-badge">
+              <i class="fa-solid fa-shield-check"></i>
+
+              Verified Form
+            </div>
+          </div>
+
+
+
+          <small class="input-note">
+            Name should match your Aadhaar or official document.
+          </small>
+        </div>
+
+
+
+
+        </div>
+        </div>
+        <!-- ========================================= -->
+        <!-- PERSONAL DETAILS FORM GRID -->
+        <!-- ========================================= -->
+
+        <div class="form-grid">
+          <!-- ========================================= -->
+          <!-- FATHER NAME -->
+          <!-- ========================================= -->
+
+          <div class="input-group">
+            <label> Father Name </label>
+
+            <div class="input-box">
+              <!-- ICON -->
+
+              <div class="input-image">
+                <img src="./assets/icons/man-svgrepo-com.svg" alt="Father" />
+              </div>
+
+              <!-- INPUT -->
+
+              <input type="text" placeholder="Enter father name" name="fatherName" required />
+            </div>
+
+            <small class="input-note">
+              Enter father's full official name.
+            </small>
+          </div>
+
+          <!-- ========================================= -->
+          <!-- MOTHER NAME -->
+          <!-- ========================================= -->
+
+          <div class="input-group">
+            <label> Mother Name </label>
+
+            <div class="input-box">
+              <!-- ICON -->
+
+              <div class="input-image">
+                <img src="./assets/icons/lady-svgrepo-com.svg" alt="Mother" />
+              </div>
+
+              <!-- INPUT -->
+
+              <input type="text" placeholder="Enter mother name" name="motherName" required />
+            </div>
+
+            <small class="input-note">
+              Enter mother's full official name.
+            </small>
+          </div>
+
+          <!-- ========================================= -->
+          <!-- DATE OF BIRTH -->
+          <!-- ========================================= -->
+
+          <div class="input-group">
+            <label> Date Of Birth </label>
+
+            <div class="input-box">
+              <!-- ICON -->
+
+              <div class="input-image">
+                <img src="./assets/icons/date-svgrepo-com.svg" alt="Date Of Birth" />
+              </div>
+
+              <!-- INPUT -->
+
+              <input type="date" name="dateOfBirth" id="dateOfBirth" required />
+            </div>
+
+            <!-- AGE NOTE -->
+
+            <small class="age-note"> Minimum age required: 15 years </small>
+
+            <!-- ERROR -->
+
+            <small class="error-text" id="dobError"></small>
+          </div>
+
+          <!-- ========================================= -->
+          <!-- GENDER -->
+          <!-- ========================================= -->
+
+          <div class="input-group">
+            <label> Gender </label>
+
+            <div class="input-box">
+              <!-- ICON -->
+
+              <div class="input-image">
+                <img src="./assets/icons/gender-female-svgrepo-com.svg" alt="Gender" />
+              </div>
+
+              <!-- SELECT -->
+
+              <select name="gender" required>
+                <option value="">Select Gender</option>
+
+                <option>Male</option>
+
+                <option>Female</option>
+
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ========================================= -->
+          <!-- CATEGORY -->
+          <!-- ========================================= -->
+
+          <div class="input-group">
+            <label> Category </label>
+
+            <div class="input-box">
+              <!-- ICON -->
+
+              <div class="input-image">
+                <img src="./assets/icons/category-solid-svgrepo-com.svg" alt="Category" />
+              </div>
+
+              <!-- SELECT -->
+
+              <select name="category" required>
+                <option value="">Select Category</option>
+
+                <option>General</option>
+
+                <option>OBC</option>
+
+                <option>SC</option>
+
+                <option>ST</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ========================================= -->
+          <!-- RELIGION -->
+          <!-- ========================================= -->
+
+          <div class="input-group">
+            <label> Religion </label>
+
+            <div class="input-box">
+              <!-- ICON -->
+
+              <div class="input-image">
+                <img src="./assets/icons/namaste-religion-svgrepo-com.svg" alt="Religion" />
+              </div>
+
+              <!-- INPUT -->
+
+              <input type="text" placeholder="Enter religion" name="religion" />
+            </div>
+          </div>
+
+          <!-- ========================================= -->
+          <!-- MARITAL STATUS -->
+          <!-- ========================================= -->
+
+          <div class="input-group">
+            <label> Marital Status </label>
+
+            <div class="input-box">
+              <!-- ICON -->
+
+              <div class="input-image">
+                <img src="./assets/icons/unmixed-svgrepo-com.svg" alt="Marital Status" />
+              </div>
+
+              <!-- SELECT -->
+
+              <select name="maritalStatus">
+                <option value="">Select Status</option>
+
+                <option>Married</option>
+
+                <option>Unmarried</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- ========================================= -->
+          <!-- NATIONALITY -->
+          <!-- ========================================= -->
+
+          <div class="input-group">
+            <label> Nationality </label>
+
+            <div class="input-box">
+              <!-- ICON -->
+
+              <div class="input-image">
+                <img src="./assets/icons/india-map-country-svgrepo-com.svg" alt="Nationality" />
+              </div>
+
+              <!-- INPUT -->
+
+              <input type="text" value="Indian" name="nationality" readonly />
+            </div>
+
+            <small class="input-note">
+              Nationality auto-selected by system.
+            </small>
+          </div>
+        </div>
+
+        <!-- ========================================= -->
+        <!-- CONTACT DETAILS -->
+        <!-- ========================================= -->
+
+        <div class="form-section contact-section">
+          <!-- TOP -->
+
+          <div class="section-top">
+            <div class="section-info">
+              <!-- IMAGE -->
+
+              <div class="section-image">
+                <img src="./assets/icons/contact-book-svgrepo-com.svg" alt="Contact" />
+              </div>
+
+              <!-- TEXT -->
+
+              <div class="section-text">
+                <span class="section-mini-tag"> Communication Details </span>
+
+                <h3>Contact Details</h3>
+
+                <p>Provide active mobile number & communication details.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- GRID -->
+
+          <div class="form-grid">
+            <!-- MOBILE -->
+
+            <div class="input-group">
+              <label> Mobile Number </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/phone-svgrepo-com.svg" alt="Mobile" />
+                </div>
+
+                <input type="tel" placeholder="Enter mobile number" name="mobile" maxlength="10" required />
+              </div>
+
+              <small class="input-note">
+                OTP & updates will be sent here.
+              </small>
+            </div>
+
+            <!-- ALT -->
+
+            <div class="input-group">
+              <label> Alternate Mobile </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/smartphone-2-svgrepo-com.svg" alt="Alternate" />
+                </div>
+
+                <input type="tel" placeholder="Alternate mobile number" name="alternateMobile" maxlength="10" />
+              </div>
+            </div>
+
+            <!-- WHATSAPP -->
+
+            <div class="input-group">
+              <label> Tel. Phone Number </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/telephone-typewriter-svgrepo-com.svg" alt="Telephone" />
+                </div>
+
+                <input type="tel" placeholder="0000 0000 0000" name="whatsappNumber" readonly />
+              </div>
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="input-group">
+              <label> Email Address </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/mail-open-alt-1-svgrepo-com.svg" alt="Email" />
+                </div>
+
+                <input type="email" placeholder="Enter email address" name="email" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================= -->
+        <!-- ADDRESS DETAILS -->
+        <!-- ========================================= -->
+
+        <div class="form-section address-section">
+          <!-- TOP -->
+
+          <div class="section-top">
+            <div class="section-info">
+              <div class="section-image">
+                <img src="./assets/icons/address-card-svgrepo-com.svg" alt="Address" />
+              </div>
+
+              <div class="section-text">
+                <span class="section-mini-tag">
+                  Residential Information
+                </span>
+
+                <h3>Address Details</h3>
+
+                <p>Enter your permanent residential address details.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- GRID -->
+
+          <div class="form-grid">
+            <!-- COUNTRY -->
+
+            <div class="input-group">
+              <label> Country </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/crown-2-svgrepo-com.svg" alt="Country" />
+                </div>
+
+                <select name="country">
+                  <option>India</option>
+                  <option>Nepal</option>
+                  <option>Bangladesh</option>
+                  <option>US</option>
+                  <option>Bhutan</option>
+                  <option>China</option>
+                  <option>Iran</option>
+                  <option>Australia</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- STATE -->
+
+            <div class="input-group">
+              <label> State </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/state-or-country-administration-building-svgrepo-com.svg" alt="State" />
+                </div>
+
+                <select name="state">
+                  <option>Select State</option>
+
+                  <option>Bihar</option>
+                  <option>Rajasthan</option>
+                  <option>Madhya Pradesh</option>
+                  <option>Gujarat</option>
+                  <option>Goa</option>
+                  <option>Maharashtra</option>
+                  <option>Uttar Pradesh</option>
+                  <option>Haryana</option>
+                  <option>Punjab</option>
+                  <option>Himachal Pradesh</option>
+                  <option>Jharkhand</option>
+                  <option>Karnataka</option>
+                  <option>Kerala</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- DISTRICT -->
+
+            <div class="input-group">
+              <label> District </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/national-highway-svgrepo-com.svg" alt="District" />
+                </div>
+
+                <input type="text" name="district" placeholder="Enter district" />
+              </div>
+            </div>
+
+            <!-- TEHSIL -->
+
+            <div class="input-group">
+              <label> Tehsil </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/judge-svgrepo-com.svg" alt="Tehsil" />
+                </div>
+
+                <input type="text" name="tehsil" placeholder="Enter tehsil" />
+              </div>
+            </div>
+
+            <!-- CITY -->
+
+            <div class="input-group">
+              <label> Village / City </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/city-buildings-svgrepo-com.svg" alt="City" />
+                </div>
+
+                <input type="text" name="villageCity" placeholder="Village or city name" />
+              </div>
+            </div>
+
+            <!-- PINCODE -->
+
+            <div class="input-group">
+              <label> Pincode </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/notes-svgrepo-com.svg" alt="Pincode" />
+                </div>
+
+                <input type="text" name="pincode" maxlength="6" placeholder="Enter pincode" />
+              </div>
+            </div>
+          </div>
+
+          <!-- ADDRESS -->
+
+          <div class="input-group full-width">
+            <label> Full Address </label>
+
+            <div class="input-box textarea-box">
+              <div class="input-image">
+                <img src="./assets/icons/address-card-svgrepo-com.svg" alt="Address" />
+              </div>
+
+              <textarea rows="3" name="fullAddress" placeholder="Enter full address"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================= -->
+        <!-- EDUCATION -->
+        <!-- ========================================= -->
+
+        <div class="form-section education-section">
+          <div class="section-top">
+            <div class="section-info">
+              <div class="section-image">
+                <img src="./assets/icons/education-learning-5-svgrepo-com.svg" alt="Education" />
+              </div>
+
+              <div class="section-text">
+                <span class="section-mini-tag"> Academic Information </span>
+
+                <h3>Education Details</h3>
+
+                <p>Enter your latest qualification & educational records.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <!-- QUALIFICATION -->
+
+            <div class="input-group">
+              <label> Qualification </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/i-exam-qualification-svgrepo-com.svg" alt="Qualification" />
+                </div>
+
+                <select name="qualification">
+                  <option>Select Qualification</option>
+
+                  <option>10th Pass</option>
+                  <option>12th Pass</option>
+                  <option>Graduation</option>
+                  <option>Post Graduation</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- INSTITUTE -->
+
+            <div class="input-group">
+              <label> School / College Name </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/school-svgrepo-com (1).svg" alt="Institute" />
+                </div>
+
+                <input type="text" name="instituteName" placeholder="Enter institute name" />
+              </div>
+            </div>
+
+            <!-- ROLL -->
+
+            <div class="input-group">
+              <label> Roll Number </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/text-square-svgrepo-com.svg" alt="Roll" />
+                </div>
+
+                <input type="text" name="RollNumber" placeholder="Enter roll number" />
+              </div>
+            </div>
+
+            <!-- YEAR -->
+
+            <div class="input-group">
+              <label> Passing Year </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/year-of-the-goat-symbol-svgrepo-com.svg" alt="Year" />
+                </div>
+
+                <select name="passingYear">
+                  <option>Select Year</option>
+
+                  <option>2026</option>
+                  <option>2025</option>
+                  <option>2024</option>
+                  <option>2023</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- PERCENTAGE -->
+
+            <div class="input-group">
+              <label> Percentage % </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/percent-svgrepo-com.svg" alt="Percentage" />
+                </div>
+
+                <input type="number" name="percentage" placeholder="Enter marks percentage" />
+              </div>
+            </div>
+
+            <!-- SKILLS -->
+
+            <div class="input-group">
+              <label> Skills </label>
+
+              <div class="input-box">
+                <div class="input-image">
+                  <img src="./assets/icons/skill-entity-svgrepo-com.svg" alt="Skills" />
+                </div>
+
+                <select name="skills">
+                  <option>Select Skill</option>
+
+                  <option>Computer Knowledge</option>
+                  <option>Mobile Usage</option>
+                  <option>Digital Learning</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================= -->
+        <!-- DOCUMENT UPLOAD SECTION -->
+        <!-- ========================================= -->
+
+        <div class="form-section upload-section">
+
+          <!-- BG SHAPE -->
+
+          <div class="section-bg-shape"></div>
+
+          <!-- SECTION TOP -->
+
+          <div class="section-top">
+
+            <div class="section-info">
+
+              <!-- IMAGE -->
+
+              <div class="section-image">
+
+                <img src="./assets/icons/document-layout-left-svgrepo-com.svg" alt="Documents" />
+
+              </div>
+
+              <!-- TEXT -->
+
+              <div class="section-text">
+
+                <span class="section-mini-tag">
+
+                  Verification Documents
+
+                </span>
+
+                <h3>
+
+                  Document Upload
+
+                </h3>
+
+                <p>
+
+                  Upload clear & valid documents for verification.
+
+                </p>
+
+              </div>
+
+            </div>
+
+            <!-- BADGE -->
+
+            <div class="section-badge">
+
+              Secure Upload
+
+            </div>
+
+          </div>
+
+          <!-- UPLOAD GRID -->
+
+          <div class="upload-grid">
+
+            <!-- PHOTO -->
+
+            <div class="upload-card">
+
+              <!-- ICON -->
+
+              <div class="upload-icon">
+
+                <img src="./assets/icons/photo-edit-svgrepo-com.svg" alt="Photo" />
+
+              </div>
+
+              <!-- TITLE -->
+
+              <h4>
+
+                Passport Photo
+
+              </h4>
+
+              <p>
+
+                JPG / PNG • Max 200KB
+
+              </p>
+
+              <!-- INPUT -->
+
+              <input type="file" id="passportPhoto" name="passportPhoto" accept=".jpg,.jpeg,.png" required />
+
+              <!-- PREVIEW -->
+
+              <img id="photoPreview" class="preview-image" alt="Preview" />
+
+            </div>
+
+            <!-- SIGNATURE -->
+
+            <div class="upload-card">
+
+              <div class="upload-icon">
+
+                <img src="./assets/icons/sign-caution-svgrepo-com.svg" alt="Signature" />
+
+              </div>
+
+              <h4>
+
+                Signature
+
+              </h4>
+
+              <p>
+
+                JPG / PNG • Max 100KB
+
+              </p>
+
+              <input type="file" id="signature" name="signature" accept=".jpg,.jpeg,.png" required />
+
+            </div>
+
+            <!-- AADHAAR -->
+
+            <div class="upload-card">
+
+              <div class="upload-icon">
+
+                <img src="./assets/icons/card-2-svgrepo-com.svg" alt="Aadhaar" />
+
+              </div>
+
+              <h4>
+
+                Aadhaar Card
+
+              </h4>
+
+              <p>
+
+                PDF / JPG • Max 500KB
+
+              </p>
+
+              <input type="file" id="idProof" name="idProof" accept=".pdf,.jpg,.jpeg,.png" required />
+
+            </div>
+
+            <!-- EDUCATION -->
+
+            <div class="upload-card">
+
+              <div class="upload-icon">
+
+                <img src="./assets/icons/certificate-badge-svgrepo-com.svg" alt="Certificate" />
+
+              </div>
+
+              <h4>
+
+                Qualification Certificate
+
+              </h4>
+
+              <p>
+
+                PDF / JPG • Max 500KB
+
+              </p>
+
+              <input type="file" id="qualificationCertificate" name="qualificationCertificate"
+                accept=".pdf,.jpg,.jpeg,.png" required />
+
+            </div>
+
+          </div>
+
+        </div>
+        <!-- ========================= -->
+        <!-- DECLARATION -->
+        <!-- ========================= -->
+
+        <div class="declaration-box">
+          <input type="checkbox" required />
+
+          <p>
+            मैं घोषणा करता/करती हूँ कि मेरे द्वारा दी गई सभी जानकारी सही है।
+            यदि कोई जानकारी गलत पाई जाती है तो मेरा आवेदन निरस्त किया जा सकता
+            है।
+          </p>
+        </div>
+
+
+
+        <!-- BUTTON -->
+
+        <button type="submit" class="submit-btn">
+
+          Submit Verification Form →
+
+        </button>
+      </form>
+    </section>
+  </main>
+
+
+
+
+  <!-- DETAILS FORM SCRIPT -->
+
+  <script>
+
+    /* =========================================
+    GET SELECTED SCHEME
+    ========================================= */
+
+    const selectedScheme =
+
+      localStorage.getItem(
+        "selectedScheme"
+      );
+
+    /* =========================================
+    GET BASIC FORM DATA
+    ========================================= */
+
+    const basicData =
+
+      JSON.parse(
+
+        localStorage.getItem(
+          "basicFormData"
+        )
+
+      );
+
+    /* =========================================
+CHECK BASIC DATA
+========================================= */
+
+    if (!basicData) {
+
+      alert(
+        "❌ Basic Form Data Missing"
+      );
+
+      setTimeout(() => {
+
+        window.location.href =
+          "./payment.html";
+
+      }, 1000);
+    }
+
+    /* =========================================
+    GET ELEMENTS
+    ========================================= */
+
+    const schemeHeading =
+
+      document.getElementById(
+        "schemeHeading"
+      );
+
+    const schemeParagraph =
+
+      document.getElementById(
+        "schemeParagraph"
+      );
+
+    const detailsForm =
+
+      document.getElementById(
+        "registrationForm"
+      );
+
+    const dobInput =
+
+      document.getElementById(
+        "dateOfBirth"
+      );
+
+    const dobError =
+
+      document.getElementById(
+        "dobError"
+      );
+
+    const passportPhoto =
+
+      document.getElementById(
+        "passportPhoto"
+      );
+
+    /* =========================================
+    DYNAMIC SCHEME CONTENT
+    ========================================= */
+
+    function updateSchemeContent() {
+
+      if (selectedScheme === "silai") {
+
+        schemeHeading.innerHTML =
+
+          "Free Silai Machine Yojana 2026";
+
+        schemeParagraph.innerHTML =
+
+          "महिलाओं को आत्मनिर्भर बनाने हेतु विशेष योजना।";
+
+      }
+
+      else {
+
+        schemeHeading.innerHTML =
+
+          "Free Smartphone Yojana 2026";
+
+        schemeParagraph.innerHTML =
+
+          "भारत सरकार द्वारा युवाओं को डिजिटल रूप से सशक्त बनाने हेतु विशेष योजना।";
+
+      }
+
+    }
+
+    updateSchemeContent();
+
+    /* =========================================
+    AGE VALIDATION
+    15+
+    ========================================= */
+
+    const today =
+      new Date();
+
+    const maxDate =
+
+      new Date(
+
+        today.getFullYear() - 15,
+
+        today.getMonth(),
+
+        today.getDate()
+
+      );
+
+    /* MAX DATE */
+
+    dobInput.max =
+
+      maxDate.toISOString()
+        .split("T")[0];
+
+    /* DOB CHECK */
+
+    dobInput.addEventListener(
+
+      "change",
+
+      function () {
+
+        const selectedDate =
+
+          new Date(this.value);
+
+        if (
+
+          selectedDate > maxDate
+
+        ) {
+
+          dobError.innerText =
+
+            "❌ Minimum age must be 15 years";
+
+          this.value = "";
+
+        }
+
+        else {
+
+          dobError.innerText = "";
+
+        }
+
+      }
+
+    );
+
+    /* =========================================
+    PHOTO VALIDATION
+    ========================================= */
+
+    passportPhoto.addEventListener(
+
+      "change",
+
+      function () {
+
+        const file =
+          this.files[0];
+
+        if (
+
+          file &&
+          file.size > 200000
+
+        ) {
+
+          alert(
+            "❌ Photo size must be under 200KB"
+          );
+
+          this.value = "";
+
+        }
+
+      }
+
+    );
+
+    detailsForm.onsubmit = null;
+
+    /* =========================================
+    FORM SUBMIT
+    ========================================= */
+
+    detailsForm.addEventListener(
+
+      "submit",
+
+      async function (e) {
+
+        e.preventDefault();
+
+        /* DOB CHECK */
+
+        if (
+
+          dobError.innerText !== ""
+
+        ) {
+
+          alert(
+            "❌ Please enter valid age"
+          );
+
+          return;
+
+        }
+
+        /* BUTTON */
+
+        const submitBtn =
+
+          document.querySelector(
+            ".submit-btn"
+          );
+
+        submitBtn.disabled = true;
+
+        submitBtn.innerHTML =
+          "Processing...";
+
+        try {
+
+          /* =========================================
+          FORM DATA
+          ========================================= */
+
+          const formData =
+
+            new FormData(detailsForm);
+
+          /* =========================================
+          APPEND BASIC FORM DATA
+          ========================================= */
+
+          formData.append(
+            "fullName",
+            basicData.fullName
+          );
+
+          formData.append(
+            "schemeCategory",
+            basicData.scheme
+          );
+
+
+          /* =========================================
+          API CALL
+          ========================================= */
+
+          const response = await fetch(
+
+            "http://localhost:5000/api/candidates/register",
+
+            {
+
+              method: "POST",
+
+              body: formData
+
+            }
+
+          );
+
+          /* =========================================
+          RESPONSE
+          ========================================= */
+
+          const data =
+            await response.json();
+
+          console.log(data);
+
+          /* =========================================
+          SUCCESS
+          ========================================= */
+
+          if (data.success) {
+
+            /* SAVE DATA */
+
+            localStorage.setItem(
+
+              "candidateData",
+
+              JSON.stringify(
+                data.candidate
+              )
+
+            );
+            /* =========================================
+PAYMENT AMOUNT
+========================================= */
+
+            let paymentAmount = 408;
+
+            /* SAVE */
+
+            localStorage.setItem(
+              "paymentAmount",
+              paymentAmount
+            );
+
+            /* SAVE SCHEME */
+
+            localStorage.setItem(
+              "selectedScheme",
+              basicData.scheme
+            );
+
+            /* =========================================
+            SAVE PHOTO
+            ========================================= */
+
+           /* =========================================
+SAVE PHOTO
+========================================= */
+
+const photoFile = passportPhoto.files[0];
+
+if (photoFile) {
+
+  const reader = new FileReader();
+
+  reader.onload = function (event) {
+
+    localStorage.setItem(
+      "candidatePhoto",
+      event.target.result
+    );
+
+  };
+
+  reader.readAsDataURL(photoFile);
+
+}
+
+/* =========================================
+REDIRECT TO PAYMENT
+========================================= */
+
+window.location.href = "./payment.html";
+
+
+
+            
+          }
+
+          /* FAILED */
+
+          else {
+
+            alert(
+              data.message
+            );
+
+          }
+
+        }
+
+        /* SERVER ERROR */
+
+        catch (error) {
+
+          console.log(error);
+
+          alert(
+            "❌ Server Error"
+          );
+
+        }
+
+        /* FINAL */
+
+        finally {
+
+          submitBtn.disabled =
+            false;
+
+          submitBtn.innerHTML =
+
+            "Submit Verification Form →";
+
+        }
+
+      }
+
+    );
+
+  </script>
+</body>
+
+</html>

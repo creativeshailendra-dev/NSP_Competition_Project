@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- BASIC -->
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- TITLE -->
+
+    <title>Basic Registration | National Skill Competition</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FONT AWESOME -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./css/form.css" />
+  </head>
+  <link rel="stylesheet" href="./css/global.css">
+
+  <body>
+    <!-- ========================================= -->
+    <!-- PAGE WRAPPER -->
+    <!-- ========================================= -->
+
+    <main class="basic-form-page">
+      <!-- ========================================= -->
+      <!-- LEFT SIDE -->
+      <!-- ========================================= -->
+
+      <section class="form-left">
+        <div class="overlay"></div>
+
+        <div class="left-content">
+          <!-- BADGE -->
+
+          <span class="tag"> 🇮🇳 Official National Registration Portal </span>
+
+          <!-- TITLE -->
+
+          <h1>National Skill Competition 2026</h1>
+
+          <!-- DESCRIPTION -->
+
+          <p>
+            भारत के सबसे बड़े राष्ट्रीय कौशल एवं रोजगार कार्यक्रम में आवेदन
+            करें।
+          </p>
+
+          <!-- FEATURE LIST -->
+
+          <div class="feature-list">
+            <div class="feature-item">
+              <i class="fa-solid fa-circle-check"></i>
+
+              National Level Registration
+            </div>
+
+            <div class="feature-item">
+              <i class="fa-solid fa-id-card"></i>
+
+              Instant Registration ID
+            </div>
+
+            <div class="feature-item">
+              <i class="fa-solid fa-shield-halved"></i>
+
+              Secure Verification System
+            </div>
+
+            <div class="feature-item">
+              <i class="fa-solid fa-award"></i>
+
+              Government Style Portal
+            </div>
+          </div>
+
+          <!-- IMAGE -->
+
+          <div class="left-image">
+            <img
+              src="./assets/images/form-illustrations.webp"
+              alt="Registration"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ========================================= -->
+      <!-- RIGHT SIDE -->
+      <!-- ========================================= -->
+
+      <section class="form-right">
+        <!-- FORM HEADER -->
+
+        <div class="form-header">
+          <span class="step-badge"> STEP 1 OF 2 </span>
+
+          <h2>Basic Registration Form</h2>
+
+          <p>कृपया अपनी प्रारंभिक जानकारी भरें।</p>
+        </div>
+
+        <!-- ========================================= -->
+        <!-- FORM -->
+        <!-- ========================================= -->
+
+        <form id="basicForm" class="basic-form">
+          <!-- NAME ROW -->
+
+          <div class="form-row full-width-row">
+            <!-- FULL NAME -->
+
+            <div class="input-group">
+              <label> Full Name </label>
+
+              <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  placeholder="Enter full name"
+                  required
+                />
+              </div>
+
+              <small class="error-text"></small>
+            </div>
+          </div>
+
+          <!-- AGE -->
+
+          <div class="input-group">
+            <label> Select Age </label>
+
+            <div class="input-box">
+              <i class="fa-solid fa-user-clock"></i>
+
+              <select name="age" id="age" required>
+                <option value="">Select Age</option>
+
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+              </select>
+            </div>
+
+            <small class="input-note">
+              Only age between 15 to 27 allowed
+            </small>
+          </div>
+
+          <!-- GENDER -->
+
+          <div class="input-group">
+            <label> Gender </label>
+
+            <div class="input-box">
+              <i class="fa-solid fa-venus-mars"></i>
+
+              <select id="gender">
+                <option value="">Select Gender</option>
+
+                <option>Male</option>
+
+                <option>Female</option>
+
+                <option>Other</option>
+              </select>
+            </div>
+
+            <small class="error-text"></small>
+          </div>
+
+          <!-- MOBILE -->
+
+          <div class="input-group">
+            <label> Mobile Number </label>
+
+            <div class="input-box">
+              <i class="fa-solid fa-phone"></i>
+
+              <input type="tel" id="mobile" placeholder="Enter mobile number" />
+            </div>
+
+            <small class="error-text"></small>
+          </div>
+
+          <!-- EMAIL -->
+
+          <div class="input-group">
+            <label> Email Address </label>
+
+            <div class="input-box">
+              <i class="fa-solid fa-envelope"></i>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter email address"
+              />
+            </div>
+
+            <small class="error-text"></small>
+          </div>
+
+          <!-- NATIONALITY -->
+
+          <div class="input-group">
+            <label> Nationality </label>
+
+            <div class="input-box">
+              <i class="fa-solid fa-earth-asia"></i>
+
+              <select id="nationality">
+                <option value="">Choose Your Country</option>
+
+                <option>India</option>
+
+                <option>Nepal</option>
+
+                <option>Bhutan</option>
+
+                <option>Bangladesh</option>
+
+                <option>Other</option>
+              </select>
+            </div>
+
+            <small class="error-text"></small>
+          </div>
+
+          <!-- SCHEME -->
+
+          <div class="input-group">
+            <label> Select Competition </label>
+
+            <div class="input-box">
+              <i class="fa-solid fa-trophy"></i>
+
+              <select id="schemeSelect">
+                <option value="">Select Scheme</option>
+
+                <option value="smartphone">📱 Free Smartphone Yojana</option>
+
+                <option value="silai">🧵 Free Silai Machine Yojana</option>
+              </select>
+            </div>
+
+            <small class="error-text"></small>
+          </div>
+
+          <!-- TERMS -->
+
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" />
+
+            <label for="terms">
+              I confirm that all information provided is correct.
+            </label>
+          </div>
+
+          <small class="error-text checkbox-error"></small>
+
+          <!-- BUTTON -->
+
+          <button type="submit" class="continue-btn">
+            <i class="fa-solid fa-arrow-right"></i>
+
+            Continue To Detailed Form
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!-- ========================================= -->
+    <!-- PROFESSIONAL FORM LOGIC -->
+    <!-- ========================================= -->
+
+    <script>
+      /* =========================================
+GET FORM
+========================================= */
+
+      const basicForm = document.getElementById("basicForm");
+
+      /* =========================================
+INPUTS
+========================================= */
+
+      const fullName = document.getElementById("fullName");
+
+      const age = document.getElementById("age");
+
+      const gender = document.getElementById("gender");
+
+      const mobile = document.getElementById("mobile");
+
+      const email = document.getElementById("email");
+
+      const nationality = document.getElementById("nationality");
+
+      const schemeSelect = document.getElementById("schemeSelect");
+
+      const terms = document.getElementById("terms");
+
+      /* =========================================
+FORM SUBMIT
+========================================= */
+
+      basicForm.addEventListener(
+        "submit",
+
+        function (event) {
+          event.preventDefault();
+
+          /* VALID */
+
+          let isValid = true;
+
+          /* CLEAR OLD ERRORS */
+
+          document
+            .querySelectorAll(".error-text")
+
+            .forEach((error) => {
+              error.innerText = "";
+            });
+
+          /* =========================================
+FULL NAME
+========================================= */
+
+          if (fullName.value.trim() === "") {
+            showError(
+              fullName,
+
+              "Full name is required",
+            );
+
+            isValid = false;
+          }
+
+          /* =========================================
+AGE
+========================================= */
+
+          if (age.value === "") {
+            showError(
+              age,
+
+              "Please select age",
+            );
+
+            isValid = false;
+          }
+
+          /* =========================================
+GENDER
+========================================= */
+
+          if (gender.value === "") {
+            showError(
+              gender,
+
+              "Please select gender",
+            );
+
+            isValid = false;
+          }
+
+          /* =========================================
+MOBILE
+========================================= */
+
+          const mobilePattern = /^[0-9]{10}$/;
+
+          if (!mobilePattern.test(mobile.value)) {
+            showError(
+              mobile,
+
+              "Enter valid 10 digit number",
+            );
+
+            isValid = false;
+          }
+
+          /* =========================================
+EMAIL
+========================================= */
+
+          const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+          if (!emailPattern.test(email.value)) {
+            showError(
+              email,
+
+              "Enter valid email",
+            );
+
+            isValid = false;
+          }
+
+          /* =========================================
+NATIONALITY
+========================================= */
+
+          if (nationality.value === "") {
+            showError(
+              nationality,
+
+              "Please select nationality",
+            );
+
+            isValid = false;
+          }
+
+          /* =========================================
+SCHEME
+========================================= */
+
+          if (schemeSelect.value === "") {
+            showError(
+              schemeSelect,
+
+              "Please select scheme",
+            );
+
+            isValid = false;
+          }
+
+          /* =========================================
+TERMS
+========================================= */
+
+          if (!terms.checked) {
+            document.querySelector(".checkbox-error").innerText =
+              "Please accept terms";
+
+            isValid = false;
+          }
+
+          /* =========================================
+SUCCESS
+========================================= */
+
+          if (isValid) {
+            /* USER DATA */
+
+            const userData = {
+              fullName: fullName.value,
+
+              age: age.value,
+
+              gender: gender.value,
+
+              mobile: mobile.value,
+
+              email: email.value,
+
+              nationality: nationality.value,
+
+              scheme: schemeSelect.value,
+            };
+
+            /* SAVE */
+
+            localStorage.setItem(
+              "basicFormData",
+
+              JSON.stringify(userData),
+            );
+
+            /* SAVE SCHEME */
+
+            localStorage.setItem(
+              "selectedScheme",
+
+              schemeSelect.value,
+            );
+
+            /* SUCCESS */
+
+            alert("✅ Basic Registration Successful");
+
+            /* REDIRECT */
+
+            window.location.href = "./details-form.html";
+          }
+        },
+
+        /* END */
+      );
+
+      /* =========================================
+ERROR FUNCTION
+========================================= */
+
+      function showError(input, message) {
+        const inputGroup = input.closest(".input-group");
+
+        const errorText = inputGroup.querySelector(".error-text");
+
+        errorText.innerText = message;
+      }
+    </script>
+  </body>
+</html>

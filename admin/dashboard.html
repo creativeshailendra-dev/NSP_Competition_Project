@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- ====================================
+    META
+    ==================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ====================================
+    TITLE
+    ==================================== -->
+
+    <title>
+        NSP Admin Dashboard
+    </title>
+
+    <!-- ====================================
+    FAVICON
+    ==================================== -->
+
+    <link rel="icon" href="../assets/logos/logo.png">
+
+    <!-- ====================================
+    GOOGLE FONT
+    ==================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ====================================
+    FONT AWESOME
+    ==================================== -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- ====================================
+    CSS FILES
+    ==================================== -->
+
+    <link rel="stylesheet" href="./css/global.css">
+
+    <link rel="stylesheet" href="./css/components.css">
+
+    <link rel="stylesheet" href="./css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- ====================================
+    MOBILE OVERLAY
+    ==================================== -->
+
+    <div class="mobile-overlay"></div>
+
+    <!-- ====================================
+    MASTER DASHBOARD
+    ==================================== -->
+
+    <div class="dashboard-layout">
+
+        <!-- ====================================
+        SIDEBAR
+        ==================================== -->
+
+        <aside class="master-sidebar">
+
+            <!-- BRAND -->
+
+            <div class="sidebar-brand">
+
+                <img src="../assets/logos/logo.png" alt="Logo">
+
+                <div class="brand-text">
+
+                    <h2>
+                        NSP Portal
+                    </h2>
+
+                    <span>
+                        Admin Dashboard
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- NAVIGATION -->
+
+            <ul class="sidebar-nav">
+
+                <li class="active">
+
+                    <a href="./dashboard.html">
+
+                        <i class="fa-solid fa-table-columns"></i>
+
+                        <span>
+                            Dashboard
+                        </span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./applications.html">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        <span>
+                            Applications
+                        </span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./payments.html">
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                        <span>
+                            Payments
+                        </span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./verification.html">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <span>
+                            Verification
+                        </span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./analytics.html">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <span>
+                            Analytics
+                        </span>
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="./settings.html">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        <span>
+                            Settings
+                        </span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+            <!-- FOOTER -->
+
+            <div class="sidebar-footer">
+
+                <div class="sidebar-admin-card">
+
+                    <img src="../assets/images/admin.jpg" alt="Admin">
+
+                    <div>
+
+                        <h4>
+                            Super Admin
+                        </h4>
+
+                        <p>
+                            Full Access
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+        <!-- ====================================
+        MAIN CONTENT
+        ==================================== -->
+
+        <main class="dashboard-main">
+
+            <!-- ====================================
+            TOPBAR
+            ==================================== -->
+
+            <header class="master-topbar">
+
+                <!-- LEFT -->
+
+                <div class="topbar-left">
+
+                    <button class="menu-toggle">
+
+                        <i class="fa-solid fa-bars"></i>
+
+                    </button>
+
+                    <div class="page-heading">
+
+                        <h1>
+                            Dashboard Overview
+                        </h1>
+
+                        <p>
+                            Welcome back 👋 Here's your live portal analytics.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="topbar-right">
+
+                    <!-- SEARCH -->
+
+                    <div class="global-search">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="text" placeholder="Search applications...">
+
+                    </div>
+
+                    <!-- NOTIFICATION -->
+
+                    <button class="topbar-icon-btn">
+
+                        <i class="fa-solid fa-bell"></i>
+
+                    </button>
+
+                    <!-- PROFILE -->
+
+                    <div class="admin-account">
+
+                        <img src="../assets/images/admin.jpg" alt="Admin">
+
+                        <div class="admin-info">
+
+                            <h4>
+                                Admin User
+                            </h4>
+
+                            <span>
+                                Super Administrator
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+            <!-- ====================================
+            DASHBOARD CONTENT
+            ==================================== -->
+
+            <section class="dashboard-content">
+
+                <!-- ====================================
+                ANALYTICS GRID
+                ==================================== -->
+
+                <section class="analytics-grid">
+
+                    <!-- CARD -->
+
+                    <div class="premium-stats-card analytics-orange">
+
+                        <div class="analytics-icon">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <div class="analytics-content">
+
+                            <h2>
+                                12,540
+                            </h2>
+
+                            <p>
+                                Total Applications
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD -->
+
+                    <div class="premium-stats-card analytics-blue">
+
+                        <div class="analytics-icon">
+
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                        </div>
+
+                        <div class="analytics-content">
+
+                            <h2>
+                                ₹5.2L
+                            </h2>
+
+                            <p>
+                                Revenue Generated
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD -->
+
+                    <div class="premium-stats-card analytics-green">
+
+                        <div class="analytics-icon">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                        </div>
+
+                        <div class="analytics-content">
+
+                            <h2>
+                                8,932
+                            </h2>
+
+                            <p>
+                                Approved Users
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- CARD -->
+
+                    <div class="premium-stats-card analytics-purple">
+
+                        <div class="analytics-icon">
+
+                            <i class="fa-solid fa-clock"></i>
+
+                        </div>
+
+                        <div class="analytics-content">
+
+                            <h2>
+                                1,248
+                            </h2>
+
+                            <p>
+                                Pending Verification
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- ====================================
+    JS FILES
+    ==================================== -->
+
+    <script src="./js/global.js"></script>
+
+    <script src="./js/sidebar.js"></script>
+
+    <script src="./js/dashboard.js"></script>
+
+</body>
+
+</html>
