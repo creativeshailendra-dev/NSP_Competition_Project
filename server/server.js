@@ -26,7 +26,7 @@ ROUTES
 
 const candidateRoutes = require("./routes/candidateRoutes");
 
-const paymentRoutes = require("./routes/paymentRoutes");
+//const paymentRoutes = require("./routes/paymentRoutes");//
 
 // ========================================
 // MIDDLEWARE
@@ -62,11 +62,11 @@ app.use(
   candidateRoutes,
 );
 
-app.use(
+/* app.use(
   "/api/payment",
 
   paymentRoutes,
-);
+); */
 
 // ========================================
 // HOME ROUTE
