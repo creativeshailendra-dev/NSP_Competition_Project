@@ -54,7 +54,7 @@ trackBtn.addEventListener(
 
       const response = await fetch(
 
-        `http://localhost:5000/api/students/${registrationId}`
+        `http://https://nsp-backend-jx1j.onrender.com/api/students/${registrationId}`
 
       );
 
@@ -113,7 +113,7 @@ trackBtn.addEventListener(
 
           <img
 
-            src="http://localhost:5000/uploads/${student.photo}"
+            src="http://https://nsp-backend-jx1j.onrender.com/uploads/${student.photo}"
 
             class="track-photo"
 

@@ -107,7 +107,7 @@ paymentBtn.addEventListener("click", async (e) => {
         // ==========================================
 
         const res = await fetch(
-          "http://localhost:5000/api/students",
+          "http://https://nsp-backend-jx1j.onrender.com/api/students",
 
           {
             method: "POST",
