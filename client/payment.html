@@ -128,7 +128,7 @@
           <div class="info-row">
             <span> Verification </span>
 
-            <strong> Instant </strong>
+            <strong> Razorpay Secure </strong>
           </div>
         </div>
 
@@ -156,29 +156,25 @@
             <p id="payEmail"></p>
           </div>
 
-         <a
-href="https://superprofile.bio/vp/6a081bc054dffa001334e560"
-class="superprofile-btn"
-id="paymentBtn"
->
+          <button onclick="payNow()" id="paymentBtn">
 
-Proceed To Payment ₹408
+            Confirm Details & Pay ₹408
 
-</a>
+          </button>
 
-         <div class="payment-note">
+          <div class="payment-note">
 
-After completing payment,
-return to this page and click
-the button below.
+            After completing payment,
+            return to this page and click
+            the button below.
 
-</div>
+          </div>
 
-<button id="verifyPaymentBtn">
+          <button id="verifyPaymentBtn">
 
-I Have Completed Payment
+            I Have Completed Payment
 
-</button>
+          </button>
 
         </div>
 
@@ -186,8 +182,8 @@ I Have Completed Payment
         <!-- JS -->
 
         <script src="./js/payment.js"></script>
-       
-        
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
 </body>
 
 </html>

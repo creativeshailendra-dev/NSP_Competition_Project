@@ -1228,3 +1228,159 @@ RESPONSIVE
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================
+PREMIUM PAYMENT BUTTON
+========================================= */
+
+.payment-submit-btn{
+
+width:100%;
+
+height:72px;
+
+border:none;
+
+border-radius:24px;
+
+background:
+linear-gradient(
+135deg,
+#f97316,
+#ea580c
+);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:14px;
+
+color:white;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+position:relative;
+
+overflow:hidden;
+
+transition:0.35s;
+
+margin-top:10px;
+
+box-shadow:
+0 20px 45px rgba(249,115,22,0.32);
+
+}
+
+/* HOVER */
+
+.payment-submit-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:
+0 28px 60px rgba(249,115,22,0.42);
+
+}
+
+/* ACTIVE */
+
+.payment-submit-btn:active{
+
+transform:scale(0.98);
+
+}
+
+/* SHINE EFFECT */
+
+.payment-submit-btn::before{
+
+content:"";
+
+position:absolute;
+
+width:140px;
+
+height:100%;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,0.28),
+transparent
+);
+
+top:0;
+
+left:-160px;
+
+transition:0.8s;
+
+}
+
+.payment-submit-btn:hover::before{
+
+left:120%;
+
+}
+
+/* LOCK ICON */
+
+.btn-lock{
+
+font-size:20px;
+
+}
+
+/* TEXT */
+
+.btn-text{
+
+letter-spacing:0.3px;
+
+}
+
+/* ARROW */
+
+.btn-arrow{
+
+font-size:22px;
+
+transition:0.3s;
+
+}
+
+/* HOVER */
+
+.payment-submit-btn:hover .btn-arrow{
+
+transform:translateX(6px);
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.payment-submit-btn{
+
+height:65px;
+
+font-size:16px;
+
+border-radius:20px;
+
+padding:0 18px;
+
+}
+
+}

@@ -1,3 +1,6 @@
+
+require("dotenv").config();
+const Razorpay = require("razorpay");
 const express = require("express");
 
 const mongoose = require("mongoose");
@@ -25,6 +28,10 @@ EXPRESS APP
 ======================================== */
 
 const app = express();
+const razorpay = new Razorpay({
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_KEY_SECRET,
+});
 
 /* ========================================
 ROUTES
@@ -33,6 +40,32 @@ ROUTES
 const candidateRoutes = require("./routes/candidateRoutes");
 
 //const paymentRoutes = require("./routes/paymentRoutes");//
+app.post("/create-order", async (req, res) => {
+
+  try {
+
+    const options = {
+      amount: 50000,
+      currency: "INR",
+      receipt: "receipt_001",
+    };
+
+    const order = await razorpay.orders.create(options);
+
+    res.json(order);
+
+  } catch (error) {
+
+    console.log(error);
+
+    res.status(500).json({
+      success: false,
+      message: "Order creation failed",
+    });
+
+  }
+
+});
 
 // ========================================
 // MIDDLEWARE

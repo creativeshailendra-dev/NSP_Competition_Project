@@ -924,16 +924,28 @@
 
         <!-- BUTTON -->
 
-        <button type="submit" class="submit-btn">
+        <button type="submit" class="payment-submit-btn" id="paymentBtn">
 
-          Submit Verification Form →
+          <span class="btn-lock">🔒</span>
+
+          <span class="btn-text">
+
+            Confirm Details & Pay ₹408
+
+          </span>
+
+          <span class="btn-arrow">
+
+            →
+
+          </span>
 
         </button>
       </form>
     </section>
   </main>
 
-
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 
   <!-- DETAILS FORM SCRIPT -->
@@ -1186,9 +1198,8 @@ CHECK BASIC DATA
         const submitBtn =
 
           document.querySelector(
-            ".submit-btn"
+            ".payment-submit-btn"
           );
-
         submitBtn.disabled = true;
 
         submitBtn.innerHTML =
@@ -1287,38 +1298,120 @@ PAYMENT AMOUNT
             SAVE PHOTO
             ========================================= */
 
-           /* =========================================
-SAVE PHOTO
-========================================= */
+            /* =========================================
+ SAVE PHOTO
+ ========================================= */
 
-const photoFile = passportPhoto.files[0];
+            const photoFile = passportPhoto.files[0];
 
-if (photoFile) {
+            if (photoFile) {
 
-  const reader = new FileReader();
+              const reader = new FileReader();
 
-  reader.onload = function (event) {
+              reader.onload = function (event) {
 
-    localStorage.setItem(
-      "candidatePhoto",
-      event.target.result
-    );
+                localStorage.setItem(
+                  "candidatePhoto",
+                  event.target.result
+                );
 
-  };
+              };
 
-  reader.readAsDataURL(photoFile);
+              reader.readAsDataURL(photoFile);
 
-}
+            }
 
-/* =========================================
-REDIRECT TO PAYMENT
-========================================= */
+            /* =========================================
+            REDIRECT TO PAYMENT
+            ========================================= */
 
-window.location.href = "./payment.html";
+            // =========================================
+            // CREATE RAZORPAY ORDER
+            // =========================================
+
+            const orderResponse = await fetch(
+
+              "https://nsp-backend-jx1j.onrender.com/create-order",
+
+              {
+                method: "POST",
+              }
+
+            );
+
+            const order = await orderResponse.json();
+
+            console.log(order);
+
+            // =========================================
+            // RAZORPAY OPTIONS
+            // =========================================
+
+            const options = {
+
+              key: "rzp_test_SoNhTVtWE1hPlA",
+
+              amount: order.amount,
+
+              currency: order.currency,
+
+              name: "National Skill Portal",
+
+              description: "Registration Fee",
+
+              order_id: order.id,
+
+              handler: function (response) {
+
+                // SAVE DATA
+
+                localStorage.setItem(
+                  "registrationId",
+                  data.candidate.registrationId
+                );
+
+                localStorage.setItem(
+                  "candidateName",
+                  data.candidate.fullName
+                );
+
+                localStorage.setItem(
+                  "candidateMobile",
+                  data.candidate.mobile
+                );
+
+                // SUCCESS PAGE
+
+                window.location.href =
+                  "./success.html";
+
+              },
+
+              prefill: {
+
+                name: data.candidate.fullName,
+
+                contact: data.candidate.mobile,
+
+              },
+
+              theme: {
+                color: "#ea580c"
+              }
+
+            };
+
+            // =========================================
+            // OPEN RAZORPAY
+            // =========================================
+
+            const rzp = new Razorpay(options);
+
+            rzp.open();
 
 
 
-            
+
           }
 
           /* FAILED */
@@ -1351,10 +1444,18 @@ window.location.href = "./payment.html";
 
           submitBtn.disabled =
             false;
-
           submitBtn.innerHTML =
+            `
+<span class="btn-lock">🔒</span>
 
-            "Submit Verification Form →";
+<span class="btn-text">
+Confirm Details & Pay ₹408
+</span>
+
+<span class="btn-arrow">
+→
+</span>
+`;
 
         }
 
