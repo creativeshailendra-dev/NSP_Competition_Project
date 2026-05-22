@@ -8,100 +8,136 @@ fetch("./components/navbar.html")
 
 .then((data) => {
 
-  document.getElementById(
-    "navbar"
-  ).innerHTML = data;
+    document.getElementById(
+        "navbar"
+    ).innerHTML = data;
+
+    initNavbar();
+
+    setActiveNav();
 
 });
 
 
 /* ========================================= */
-/* HIDE NAVBAR ON SCROLL */
+/* LOAD FOOTER */
 /* ========================================= */
 
-let lastScroll = 0;
-
-window.addEventListener(
-  "scroll",
-  function () {
-
-    const navbar =
-      document.querySelector(".navbar");
-
-    const currentScroll =
-      window.pageYOffset;
-
-    if (!navbar) return;
-
-    if (currentScroll > lastScroll) {
-
-      navbar.classList.add(
-        "nav-hide"
-      );
-
-    } else {
-
-      navbar.classList.remove(
-        "nav-hide"
-      );
-
-    }
-
-    lastScroll = currentScroll;
-
-  }
-);
-
-/* ========================================= */
-/* LOAD NAVBAR */
-/* ========================================= */
-
-fetch("./components/navbar.html")
+fetch("./components/footer.html")
 
 .then((response) => response.text())
 
 .then((data) => {
 
-  document.getElementById("navbar").innerHTML = data;
+    const footer =
+    document.getElementById(
+        "footer"
+    );
 
-  initNavbar();
+    if(footer){
+
+        footer.innerHTML = data;
+
+    }
 
 });
 
 
 /* ========================================= */
-/* NAVBAR FUNCTION */
+/* PREMIUM NAVBAR UX */
 /* ========================================= */
 
 function initNavbar(){
 
-let lastScroll = 0;
+    const navbar =
+    document.querySelector(".navbar");
 
-const navbar =
-document.querySelector(".navbar");
+    let lastScroll = 0;
 
-window.addEventListener(
-"scroll",
+    window.addEventListener(
 
-function(){
+        "scroll",
 
-const currentScroll =
-window.pageYOffset;
+        ()=>{
 
-if(currentScroll > lastScroll){
+            let currentScroll =
+            window.pageYOffset;
 
-navbar.classList.add("nav-hide");
+            /* TOP AREA */
+
+            if(currentScroll <= 80){
+
+                navbar.classList.remove(
+                    "nav-hide"
+                );
+
+                return;
+
+            }
+
+            /* SCROLL DOWN */
+
+            if(currentScroll > lastScroll){
+
+                navbar.classList.add(
+                    "nav-hide"
+                );
+
+            }
+
+            /* SCROLL UP */
+
+            else{
+
+                navbar.classList.remove(
+                    "nav-hide"
+                );
+
+            }
+
+            lastScroll = currentScroll;
+
+        }
+
+    );
 
 }
 
-else{
 
-navbar.classList.remove("nav-hide");
+/* ========================================= */
+/* ACTIVE NAV LINK */
+/* ========================================= */
 
-}
+function setActiveNav(){
 
-lastScroll = currentScroll;
+    const currentPage =
+    window.location.pathname
+    .split("/")
+    .pop();
 
-});
+    const navLinks =
+    document.querySelectorAll(
+        ".nav-links a"
+    );
+
+    navLinks.forEach((link)=>{
+
+        const linkPath =
+        link.getAttribute("href");
+
+        /* REMOVE ./ */
+
+        const cleanLink =
+        linkPath.replace("./","");
+
+        if(cleanLink === currentPage){
+
+            link.classList.add(
+                "active"
+            );
+
+        }
+
+    });
 
 }

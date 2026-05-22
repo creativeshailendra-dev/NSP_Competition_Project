@@ -23,6 +23,7 @@ body {
   background: #f8fafc;
   overflow-x: hidden;
   color: #0f172a;
+      padding-top:95px;
 }
 
 
@@ -551,12 +552,9 @@ section {
 
 @media(max-width:768px){
 
-.hero,
-.about-hero,
-.contact-hero,
 .rules-hero{
 
-    padding-top:260px;
+    padding-top:180px;
 
 }
 
