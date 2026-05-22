@@ -71,6 +71,12 @@ app.post("/create-order", async (req, res) => {
 // MIDDLEWARE
 // ========================================
 
+const app = express();
+
+// ========================================
+// CORS
+// ========================================
+
 app.use(
   cors({
     origin: "https://nsp-frontend-dgwu.onrender.com",
@@ -80,6 +86,15 @@ app.use(
     credentials: true,
   })
 );
+
+// ========================================
+// RAZORPAY
+// ========================================
+
+const razorpay = new Razorpay({
+  key_id: process.env.RAZORPAY_KEY_ID,
+  key_secret: process.env.RAZORPAY_KEY_SECRET,
+});
 
 app.use(express.json());
 
