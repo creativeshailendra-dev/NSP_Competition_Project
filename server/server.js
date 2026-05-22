@@ -73,8 +73,10 @@ app.post("/create-order", async (req, res) => {
 
 app.use(
   cors({
-    origin: "*",
+    origin: "https://nsp-frontend-dgwu.onrender.com",
+
     methods: ["GET", "POST"],
+
     credentials: true,
   })
 );
