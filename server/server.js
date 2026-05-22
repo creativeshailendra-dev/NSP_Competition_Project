@@ -74,6 +74,8 @@ app.post("/create-order", async (req, res) => {
 app.use(
   cors({
     origin: "*",
+    methods: ["GET", "POST"],
+    credentials: true,
   })
 );
 
