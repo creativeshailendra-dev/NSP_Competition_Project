@@ -989,7 +989,7 @@ CHECK BASIC DATA
       setTimeout(() => {
 
         window.location.href =
-          "./payment.html";
+          "./index.html";
 
       }, 1000);
     }
@@ -1202,6 +1202,10 @@ CHECK BASIC DATA
           );
         submitBtn.disabled = true;
 
+        submitBtn.style.opacity = "0.7";
+
+        submitBtn.style.cursor = "not-allowed";
+
         submitBtn.innerHTML =
           "Processing...";
 
@@ -1216,7 +1220,7 @@ CHECK BASIC DATA
             new FormData(detailsForm);
 
           /* =========================================
-          `END BASIC FORM DATA
+          END BASIC FORM DATA
           ========================================= */
 
           formData.append(
@@ -1444,6 +1448,10 @@ PAYMENT AMOUNT
 
           submitBtn.disabled =
             false;
+
+          submitBtn.style.opacity = "1";
+
+          submitBtn.style.cursor = "pointer";
           submitBtn.innerHTML =
             `
 <span class="btn-lock">🔒</span>
