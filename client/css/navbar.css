@@ -1,6 +1,6 @@
-/* ======================================== */
-/* RESET */
-/* ======================================== */
+/* ========================================
+RESET
+======================================== */
 
 *{
     margin:0;
@@ -8,9 +8,9 @@
     box-sizing:border-box;
 }
 
-/* ======================================== */
-/* BODY FIX */
-/* ======================================== */
+/* ========================================
+BODY
+======================================== */
 
 body{
 
@@ -18,15 +18,13 @@ body{
 
     overflow-x:hidden;
 
-    font-family:
-    Arial,
-    sans-serif;
+    font-family:Arial,sans-serif;
 
 }
 
-/* ======================================== */
-/* PREMIUM NAVBAR */
-/* ======================================== */
+/* ========================================
+NAVBAR
+======================================== */
 
 .navbar{
 
@@ -49,8 +47,6 @@ body{
 
     justify-content:space-between;
 
-    gap:25px;
-
     position:fixed;
 
     top:0;
@@ -64,17 +60,15 @@ body{
     box-shadow:
     0 10px 35px rgba(0,0,0,0.18);
 
-    transition:
-    transform 0.35s ease;
+    backdrop-filter:blur(14px);
 
-    backdrop-filter:
-    blur(14px);
+    transition:0.35s ease;
 
 }
 
-/* ======================================== */
-/* NAVBAR HIDE */
-/* ======================================== */
+/* ========================================
+NAVBAR HIDE
+======================================== */
 
 .nav-hide{
 
@@ -83,9 +77,9 @@ body{
 
 }
 
-/* ======================================== */
-/* LOGO */
-/* ======================================== */
+/* ========================================
+LOGO
+======================================== */
 
 .logo{
 
@@ -95,13 +89,7 @@ body{
 
     gap:14px;
 
-    flex-shrink:0;
-
 }
-
-/* ======================================== */
-/* LOGO CIRCLE */
-/* ======================================== */
 
 .logo-circle{
 
@@ -124,14 +112,7 @@ body{
 
     justify-content:center;
 
-    box-shadow:
-    0 0 25px rgba(255,152,0,0.35);
-
 }
-
-/* ======================================== */
-/* LOGO ICON */
-/* ======================================== */
 
 .logo-icon{
 
@@ -139,17 +120,11 @@ body{
 
     height:28px;
 
-    object-fit:contain;
-
     filter:
     brightness(0)
     invert(1);
 
 }
-
-/* ======================================== */
-/* LOGO TEXT */
-/* ======================================== */
 
 .logo-text{
 
@@ -167,8 +142,6 @@ body{
 
     color:#ffffff;
 
-    line-height:1;
-
 }
 
 .logo-text span{
@@ -177,13 +150,11 @@ body{
 
     font-size:13px;
 
-    margin-top:4px;
-
 }
 
-/* ======================================== */
-/* NAV LINKS */
-/* ======================================== */
+/* ========================================
+NAV LINKS DESKTOP
+======================================== */
 
 .nav-links{
 
@@ -191,37 +162,19 @@ body{
 
     align-items:center;
 
-    justify-content:center;
-
     gap:14px;
-
-    margin-left:auto;
 
 }
 
-/* ======================================== */
-/* NAV LINK */
-/* ======================================== */
-
 .nav-links a{
 
-    height:48px;
-
-    padding:0 18px;
+    padding:14px 18px;
 
     border-radius:14px;
 
     text-decoration:none;
 
     color:#ffffff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:8px;
 
     font-size:15px;
 
@@ -233,56 +186,11 @@ body{
     background:
     rgba(255,255,255,0.03);
 
-    backdrop-filter:
-    blur(10px);
-
     transition:0.3s ease;
 
 }
 
-/* ======================================== */
-/* NAV ICON */
-/* ======================================== */
-
-.nav-icon{
-
-    width:18px;
-
-    height:18px;
-
-    object-fit:contain;
-
-    filter:
-    brightness(0)
-    invert(1);
-
-}
-
-/* ======================================== */
-/* NAV HOVER */
-/* ======================================== */
-
-.nav-links a:hover{
-
-    background:
-    linear-gradient(
-    135deg,
-    #ff9800,
-    #ff6f00
-    );
-
-    transform:
-    translateY(-2px);
-
-    box-shadow:
-    0 10px 25px rgba(255,111,0,0.25);
-
-}
-
-/* ======================================== */
-/* ACTIVE LINK */
-/* ======================================== */
-
+.nav-links a:hover,
 .nav-links a.active{
 
     background:
@@ -292,22 +200,11 @@ body{
     #ff6f00
     );
 
-    color:#ffffff;
-
-    border:
-    1px solid rgba(255,255,255,0.18);
-
-    box-shadow:
-    0 12px 28px rgba(255,111,0,0.30);
-
-    transform:
-    translateY(-2px);
-
 }
 
-/* ======================================== */
-/* APPLY BUTTON */
-/* ======================================== */
+/* ========================================
+APPLY BUTTON
+======================================== */
 
 .apply-btn{
 
@@ -322,8 +219,6 @@ body{
     align-items:center;
 
     justify-content:center;
-
-    gap:10px;
 
     text-decoration:none;
 
@@ -340,199 +235,7 @@ body{
 
     font-weight:700;
 
-    box-shadow:
-    0 12px 28px rgba(255,111,0,0.35);
-
-    transition:0.35s ease;
-
 }
-
-/* ======================================== */
-/* APPLY ICON */
-/* ======================================== */
-
-.apply-icon{
-
-    width:18px;
-
-    height:18px;
-
-    object-fit:contain;
-
-    filter:
-    brightness(0)
-    invert(1);
-
-}
-
-/* ======================================== */
-/* APPLY HOVER */
-/* ======================================== */
-
-.apply-btn:hover{
-
-    transform:
-    translateY(-3px);
-
-    background:
-    linear-gradient(
-    135deg,
-    #2563eb,
-    #1d4ed8
-    );
-
-    box-shadow:
-    0 14px 30px rgba(37,99,235,0.35);
-
-}
-
-/* ======================================== */
-/* TABLET */
-/* ======================================== */
-
-@media(max-width:1100px){
-
-    .navbar{
-
-        height:auto;
-
-        padding:18px 20px;
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-    }
-
-    .logo{
-
-        width:100%;
-
-        justify-content:center;
-
-    }
-
-    .nav-links{
-
-        width:100%;
-
-        flex-wrap:wrap;
-
-        justify-content:center;
-
-        margin-left:0;
-
-    }
-
-    .apply-btn{
-
-        width:260px;
-
-    }
-
-}
-
-/* ======================================== */
-/* MOBILE */
-/* ======================================== */
-
-@media(max-width:768px){
-
-    body{
-
-        padding-top:160px;
-
-    }
-
-    .navbar{
-
-        height:auto;
-
-        padding:18px 14px;
-
-        flex-direction:column;
-
-        align-items:center;
-
-        justify-content:center;
-
-        gap:18px;
-
-    }
-
-    .logo{
-
-        width:100%;
-
-        justify-content:center;
-
-    }
-
-    .logo-circle{
-
-        width:54px;
-
-        height:54px;
-
-    }
-
-    .logo-icon{
-
-        width:25px;
-
-        height:25px;
-
-    }
-
-    .logo-text h2{
-
-        font-size:22px;
-
-    }
-
-    .logo-text span{
-
-        font-size:12px;
-
-    }
-
-    .nav-links{
-
-        width:100%;
-
-        display:grid;
-
-        grid-template-columns:
-        1fr 1fr;
-
-        gap:12px;
-
-    }
-
-    .nav-links a{
-
-        width:100%;
-
-        min-height:52px;
-
-        font-size:14px;
-
-        padding:12px;
-
-    }
-
-    .apply-btn{
-
-        width:100%;
-
-        min-height:56px;
-
-        font-size:16px;
-
-    }
-
-}
-
 
 /* ========================================
 HAMBURGER
@@ -551,32 +254,74 @@ HAMBURGER
 }
 
 /* ========================================
-MOBILE HAMBURGER MENU
+MOBILE
 ======================================== */
 
 @media(max-width:768px){
 
-    /* HAMBURGER SHOW */
+    body{
+
+        padding-top:95px;
+
+    }
+
+    .navbar{
+
+        padding:0 20px;
+
+    }
+
+    /* LOGO */
+
+    .logo-circle{
+
+        width:50px;
+
+        height:50px;
+
+    }
+
+    .logo-icon{
+
+        width:24px;
+
+        height:24px;
+
+    }
+
+    .logo-text h2{
+
+        font-size:22px;
+
+    }
+
+    .logo-text span{
+
+        display:none;
+
+    }
+
+    /* HAMBURGER */
 
     .hamburger{
 
         display:block;
 
-        position:absolute;
+    }
 
-        top:28px;
+    /* APPLY BUTTON HIDE */
 
-        right:20px;
+    .apply-btn{
 
-        z-index:10000;
+        display:none;
 
     }
 
-    /* NAV LINKS */
+    /* MOBILE MENU */
 
     .nav-links{
 
-        position:absolute;
+        position:fixed;
 
         top:95px;
 
@@ -584,17 +329,21 @@ MOBILE HAMBURGER MENU
 
         width:100%;
 
-        background:#08113d;
+        height:calc(100vh - 95px);
 
-        display:flex;
+        background:#08113d;
 
         flex-direction:column;
 
-        padding:25px;
+        align-items:center;
+
+        justify-content:flex-start;
+
+        gap:20px;
+
+        padding-top:40px;
 
         transition:0.4s ease;
-
-        z-index:9999;
 
     }
 
@@ -603,6 +352,18 @@ MOBILE HAMBURGER MENU
     .nav-links.active{
 
         left:0;
+
+    }
+
+    .nav-links a{
+
+        width:90%;
+
+        justify-content:center;
+
+        min-height:55px;
+
+        font-size:16px;
 
     }
 
