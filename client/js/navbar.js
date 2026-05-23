@@ -16,8 +16,46 @@ fetch("./components/navbar.html")
 
     setActiveNav();
 
+    initHamburgerMenu();
+
 });
 
+
+/* =========================================
+HAMBURGER MENU
+========================================= */
+
+function initHamburgerMenu(){
+
+    const hamburger =
+    document.getElementById(
+        "hamburger"
+    );
+
+    const navLinks =
+    document.getElementById(
+        "navLinks"
+    );
+
+    if(hamburger){
+
+        hamburger.addEventListener(
+
+            "click",
+
+            ()=>{
+
+                navLinks.classList.toggle(
+                    "active"
+                );
+
+            }
+
+        );
+
+    }
+
+}
 
 /* ========================================= */
 /* LOAD FOOTER */

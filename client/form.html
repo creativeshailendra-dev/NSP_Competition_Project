@@ -1,537 +1,484 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- BASIC -->
 
-    <meta charset="UTF-8" />
+<head>
+  <!-- BASIC -->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
 
-    <!-- TITLE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Basic Registration | National Skill Competition</title>
+  <!-- TITLE -->
 
-    <!-- GOOGLE FONT -->
+  <title>Basic Registration | National Skill Competition</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- GOOGLE FONT -->
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!-- FONT AWESOME -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
+  <!-- FONT AWESOME -->
 
-    <!-- CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
 
-    <link rel="stylesheet" href="./css/form.css" />
-  </head>
-  <link rel="stylesheet" href="./css/global.css">
+  <!-- CSS -->
 
-  <body>
+  <link rel="stylesheet" href="./css/form.css" />
+</head>
+<link rel="stylesheet" href="./css/global.css" />
+
+<body>
+  <!-- ========================================= -->
+  <!-- PAGE WRAPPER -->
+  <!-- ========================================= -->
+
+  <main class="basic-form-page">
     <!-- ========================================= -->
-    <!-- PAGE WRAPPER -->
+    <!-- LEFT SIDE -->
     <!-- ========================================= -->
 
-    <main class="basic-form-page">
-      <!-- ========================================= -->
-      <!-- LEFT SIDE -->
-      <!-- ========================================= -->
+    <section class="form-left">
+      <div class="overlay"></div>
 
-      <section class="form-left">
-        <div class="overlay"></div>
+      <div class="left-content">
+        <!-- BADGE -->
 
-        <div class="left-content">
-          <!-- BADGE -->
+        <span class="tag"> 🇮🇳 Official National Registration Portal </span>
 
-          <span class="tag"> 🇮🇳 Official National Registration Portal </span>
+        <!-- TITLE -->
 
-          <!-- TITLE -->
+        <h1>National Skill Competition 2026</h1>
 
-          <h1>National Skill Competition 2026</h1>
+        <!-- DESCRIPTION -->
 
-          <!-- DESCRIPTION -->
+        <p>
+          भारत के सबसे बड़े राष्ट्रीय कौशल एवं रोजगार कार्यक्रम में आवेदन
+          करें।
+        </p>
 
-          <p>
-            भारत के सबसे बड़े राष्ट्रीय कौशल एवं रोजगार कार्यक्रम में आवेदन
-            करें।
-          </p>
+        <!-- FEATURE LIST -->
 
-          <!-- FEATURE LIST -->
+        <div class="feature-list">
+          <div class="feature-item">
+            <i class="fa-solid fa-circle-check"></i>
 
-          <div class="feature-list">
-            <div class="feature-item">
-              <i class="fa-solid fa-circle-check"></i>
-
-              National Level Registration
-            </div>
-
-            <div class="feature-item">
-              <i class="fa-solid fa-id-card"></i>
-
-              Instant Registration ID
-            </div>
-
-            <div class="feature-item">
-              <i class="fa-solid fa-shield-halved"></i>
-
-              Secure Verification System
-            </div>
-
-            <div class="feature-item">
-              <i class="fa-solid fa-award"></i>
-
-              Government Style Portal
-            </div>
+            National Level Registration
           </div>
 
-          <!-- IMAGE -->
+          <div class="feature-item">
+            <i class="fa-solid fa-id-card"></i>
 
-          <div class="left-image">
-            <img
-              src="./assets/images/form-illustrations.webp"
-              alt="Registration"
-            />
+            Instant Registration ID
+          </div>
+
+          <div class="feature-item">
+            <i class="fa-solid fa-shield-halved"></i>
+
+            Secure Verification System
+          </div>
+
+          <div class="feature-item">
+            <i class="fa-solid fa-award"></i>
+
+            Government Style Portal
           </div>
         </div>
-      </section>
+
+        <!-- IMAGE -->
+
+        <div class="left-image">
+          <img src="./assets/images/form-illustrations.webp" alt="Registration" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- RIGHT SIDE -->
+    <!-- ========================================= -->
+
+    <section class="form-right">
+      <!-- FORM HEADER -->
+
+      <div class="form-header">
+        <span class="step-badge"> STEP 1 OF 2 </span>
+
+        <h2>Basic Registration Form</h2>
+
+        <p>कृपया अपनी प्रारंभिक जानकारी भरें।</p>
+      </div>
 
       <!-- ========================================= -->
-      <!-- RIGHT SIDE -->
+      <!-- FORM -->
       <!-- ========================================= -->
 
-      <section class="form-right">
-        <!-- FORM HEADER -->
+      <form id="basicForm" class="basic-form">
+        <!-- NAME ROW -->
 
-        <div class="form-header">
-          <span class="step-badge"> STEP 1 OF 2 </span>
+        <div class="form-row full-width-row">
+          <!-- FULL NAME -->
 
-          <h2>Basic Registration Form</h2>
+          <div class="input-group">
+            <label> Full Name </label>
 
-          <p>कृपया अपनी प्रारंभिक जानकारी भरें।</p>
+            <div class="input-box">
+              <i class="fa-solid fa-user"></i>
+
+              <input type="text" id="fullName" name="fullName" placeholder="Enter full name" required />
+            </div>
+
+            <small class="error-text"></small>
+          </div>
         </div>
 
-        <!-- ========================================= -->
-        <!-- FORM -->
-        <!-- ========================================= -->
+      
 
-        <form id="basicForm" class="basic-form">
-          <!-- NAME ROW -->
+        <!-- GENDER -->
 
-          <div class="form-row full-width-row">
-            <!-- FULL NAME -->
+        <div class="input-group">
+          <label> Gender </label>
 
-            <div class="input-group">
-              <label> Full Name </label>
+          <div class="input-box">
+            <i class="fa-solid fa-venus-mars"></i>
 
-              <div class="input-box">
-                <i class="fa-solid fa-user"></i>
+            <select id="gender">
+              <option value="">Select Gender</option>
 
-                <input
-                  type="text"
-                  id="fullName"
-                  name="fullName"
-                  placeholder="Enter full name"
-                  required
-                />
-              </div>
+              <option>Male</option>
 
-              <small class="error-text"></small>
-            </div>
+              <option>Female</option>
+
+              <option>Other</option>
+            </select>
           </div>
 
-          <!-- AGE -->
+          <small class="error-text"></small>
+        </div>
 
-          <div class="input-group">
-            <label> Select Age </label>
 
-            <div class="input-box">
-              <i class="fa-solid fa-user-clock"></i>
 
-              <select name="age" id="age" required>
-                <option value="">Select Age</option>
+        <!-- AADHAAR NUMBER -->
 
-                <option>15</option>
-                <option>16</option>
-                <option>17</option>
-                <option>18</option>
-                <option>19</option>
-                <option>20</option>
-                <option>21</option>
-                <option>22</option>
-                <option>23</option>
-                <option>24</option>
-                <option>25</option>
-                <option>26</option>
-                <option>27</option>
-              </select>
-            </div>
+        <div class="input-group">
 
-            <small class="input-note">
-              Only age between 15 to 27 allowed
-            </small>
+          <label> Aadhaar Number </label>
+
+          <div class="input-box">
+
+            <i class="fa-solid fa-id-card"></i>
+
+            <input type="text" id="aadhaarNumber" name="aadhaarNumber" placeholder="Enter 12 Digit Aadhaar Number"
+              maxlength="12" pattern="[0-9]{12}" inputmode="numeric" required />
+
           </div>
 
-          <!-- GENDER -->
+          <small class="error-text"></small>
 
-          <div class="input-group">
-            <label> Gender </label>
+        </div>
 
-            <div class="input-box">
-              <i class="fa-solid fa-venus-mars"></i>
+        <!-- NATIONALITY -->
 
-              <select id="gender">
-                <option value="">Select Gender</option>
+        <div class="input-group">
+          <label> Nationality </label>
 
-                <option>Male</option>
+          <div class="input-box">
+            <i class="fa-solid fa-earth-asia"></i>
 
-                <option>Female</option>
+            <select id="nationality">
+              <option value="">Choose Your Country</option>
 
-                <option>Other</option>
-              </select>
-            </div>
+              <option>India</option>
 
-            <small class="error-text"></small>
+              <option>Nepal</option>
+
+              <option>Bhutan</option>
+
+              <option>Bangladesh</option>
+
+              <option>Other</option>
+            </select>
           </div>
 
-          <!-- MOBILE -->
+          <small class="error-text"></small>
+        </div>
 
-          <div class="input-group">
-            <label> Mobile Number </label>
+        <!-- SCHEME -->
 
-            <div class="input-box">
-              <i class="fa-solid fa-phone"></i>
+        <div class="input-group">
+          <label> Select Competition </label>
 
-              <input type="tel" id="mobile" placeholder="Enter mobile number" />
-            </div>
+          <div class="input-box">
+            <i class="fa-solid fa-trophy"></i>
 
-            <small class="error-text"></small>
+            <select id="schemeSelect">
+              <option value="">Select Scheme</option>
+
+              <option value="smartphone">📱 Free Smartphone Yojana</option>
+
+              <option value="silai">🧵 Free Silai Machine Yojana</option>
+            </select>
           </div>
 
-          <!-- EMAIL -->
+          <small class="error-text"></small>
+        </div>
 
-          <div class="input-group">
-            <label> Email Address </label>
+        <!-- TERMS -->
 
-            <div class="input-box">
-              <i class="fa-solid fa-envelope"></i>
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms" />
 
-              <input
-                type="email"
-                id="email"
-                placeholder="Enter email address"
-              />
-            </div>
+          <label for="terms">
+            I confirm that all information provided is correct.
+          </label>
+        </div>
 
-            <small class="error-text"></small>
-          </div>
+        <small class="error-text checkbox-error"></small>
 
-          <!-- NATIONALITY -->
+        <!-- BUTTON -->
 
-          <div class="input-group">
-            <label> Nationality </label>
+        <button type="submit" class="continue-btn">
+          <i class="fa-solid fa-arrow-right"></i>
 
-            <div class="input-box">
-              <i class="fa-solid fa-earth-asia"></i>
+          Continue To Detailed Form
+        </button>
+      </form>
+    </section>
+  </main>
 
-              <select id="nationality">
-                <option value="">Choose Your Country</option>
+  <!-- ========================================= -->
+  <!-- PROFESSIONAL FORM LOGIC -->
+  <!-- ========================================= -->
 
-                <option>India</option>
-
-                <option>Nepal</option>
-
-                <option>Bhutan</option>
-
-                <option>Bangladesh</option>
-
-                <option>Other</option>
-              </select>
-            </div>
-
-            <small class="error-text"></small>
-          </div>
-
-          <!-- SCHEME -->
-
-          <div class="input-group">
-            <label> Select Competition </label>
-
-            <div class="input-box">
-              <i class="fa-solid fa-trophy"></i>
-
-              <select id="schemeSelect">
-                <option value="">Select Scheme</option>
-
-                <option value="smartphone">📱 Free Smartphone Yojana</option>
-
-                <option value="silai">🧵 Free Silai Machine Yojana</option>
-              </select>
-            </div>
-
-            <small class="error-text"></small>
-          </div>
-
-          <!-- TERMS -->
-
-          <div class="checkbox-group">
-            <input type="checkbox" id="terms" />
-
-            <label for="terms">
-              I confirm that all information provided is correct.
-            </label>
-          </div>
-
-          <small class="error-text checkbox-error"></small>
-
-          <!-- BUTTON -->
-
-          <button type="submit" class="continue-btn">
-            <i class="fa-solid fa-arrow-right"></i>
-
-            Continue To Detailed Form
-          </button>
-        </form>
-      </section>
-    </main>
-
-    <!-- ========================================= -->
-    <!-- PROFESSIONAL FORM LOGIC -->
-    <!-- ========================================= -->
-
-    <script>
-      /* =========================================
+  <script>
+    /* =========================================
 GET FORM
 ========================================= */
 
-      const basicForm = document.getElementById("basicForm");
+    const basicForm = document.getElementById("basicForm");
 
-      /* =========================================
+    /* =========================================
 INPUTS
 ========================================= */
 
-      const fullName = document.getElementById("fullName");
+    const fullName = document.getElementById("fullName");
 
-      const age = document.getElementById("age");
+    const age = document.getElementById("age");
 
-      const gender = document.getElementById("gender");
+    const gender = document.getElementById("gender");
 
-      const mobile = document.getElementById("mobile");
+    const mobile = document.getElementById("mobile");
 
-      const email = document.getElementById("email");
+    const email = document.getElementById("email");
 
-      const nationality = document.getElementById("nationality");
+    const nationality = document.getElementById("nationality");
 
-      const schemeSelect = document.getElementById("schemeSelect");
+    const schemeSelect = document.getElementById("schemeSelect");
 
-      const terms = document.getElementById("terms");
+    const terms = document.getElementById("terms");
 
-      /* =========================================
+    /* =========================================
 FORM SUBMIT
 ========================================= */
 
-      basicForm.addEventListener(
-        "submit",
+    basicForm.addEventListener(
+      "submit",
 
-        function (event) {
-          event.preventDefault();
+      function (event) {
+        event.preventDefault();
 
-          /* VALID */
+        /* VALID */
 
-          let isValid = true;
+        let isValid = true;
 
-          /* CLEAR OLD ERRORS */
+        /* CLEAR OLD ERRORS */
 
-          document
-            .querySelectorAll(".error-text")
+        document
+          .querySelectorAll(".error-text")
 
-            .forEach((error) => {
-              error.innerText = "";
-            });
+          .forEach((error) => {
+            error.innerText = "";
+          });
 
-          /* =========================================
+        /* =========================================
 FULL NAME
 ========================================= */
 
-          if (fullName.value.trim() === "") {
-            showError(
-              fullName,
+        if (fullName.value.trim() === "") {
+          showError(
+            fullName,
 
-              "Full name is required",
-            );
+            "Full name is required",
+          );
 
-            isValid = false;
-          }
+          isValid = false;
+        }
 
-          /* =========================================
+        /* =========================================
 AGE
 ========================================= */
 
-          if (age.value === "") {
-            showError(
-              age,
+        if (age.value === "") {
+          showError(
+            age,
 
-              "Please select age",
-            );
+            "Please select age",
+          );
 
-            isValid = false;
-          }
+          isValid = false;
+        }
 
-          /* =========================================
+        /* =========================================
 GENDER
 ========================================= */
 
-          if (gender.value === "") {
-            showError(
-              gender,
+        if (gender.value === "") {
+          showError(
+            gender,
 
-              "Please select gender",
-            );
+            "Please select gender",
+          );
 
-            isValid = false;
-          }
+          isValid = false;
+        }
 
-          /* =========================================
+        /* =========================================
 MOBILE
 ========================================= */
 
-          const mobilePattern = /^[0-9]{10}$/;
+        const mobilePattern = /^[0-9]{10}$/;
 
-          if (!mobilePattern.test(mobile.value)) {
-            showError(
-              mobile,
+        if (!mobilePattern.test(mobile.value)) {
+          showError(
+            mobile,
 
-              "Enter valid 10 digit number",
-            );
+            "Enter valid 10 digit number",
+          );
 
-            isValid = false;
-          }
+          isValid = false;
+        }
 
-          /* =========================================
+        /* =========================================
 EMAIL
 ========================================= */
 
-          const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
-          if (!emailPattern.test(email.value)) {
-            showError(
-              email,
+        if (!emailPattern.test(email.value)) {
+          showError(
+            email,
 
-              "Enter valid email",
-            );
+            "Enter valid email",
+          );
 
-            isValid = false;
-          }
+          isValid = false;
+        }
 
-          /* =========================================
+        /* =========================================
 NATIONALITY
 ========================================= */
 
-          if (nationality.value === "") {
-            showError(
-              nationality,
+        if (nationality.value === "") {
+          showError(
+            nationality,
 
-              "Please select nationality",
-            );
+            "Please select nationality",
+          );
 
-            isValid = false;
-          }
+          isValid = false;
+        }
 
-          /* =========================================
+        /* =========================================
 SCHEME
 ========================================= */
 
-          if (schemeSelect.value === "") {
-            showError(
-              schemeSelect,
+        if (schemeSelect.value === "") {
+          showError(
+            schemeSelect,
 
-              "Please select scheme",
-            );
+            "Please select scheme",
+          );
 
-            isValid = false;
-          }
+          isValid = false;
+        }
 
-          /* =========================================
+        /* =========================================
 TERMS
 ========================================= */
 
-          if (!terms.checked) {
-            document.querySelector(".checkbox-error").innerText =
-              "Please accept terms";
+        if (!terms.checked) {
+          document.querySelector(".checkbox-error").innerText =
+            "Please accept terms";
 
-            isValid = false;
-          }
+          isValid = false;
+        }
 
-          /* =========================================
+        /* =========================================
 SUCCESS
 ========================================= */
 
-          if (isValid) {
-            /* USER DATA */
+        if (isValid) {
+          /* USER DATA */
 
-            const userData = {
-              fullName: fullName.value,
+          const userData = {
+            fullName: fullName.value,
 
-              age: age.value,
+            age: age.value,
 
-              gender: gender.value,
+            gender: gender.value,
 
-              mobile: mobile.value,
+            mobile: mobile.value,
 
-              email: email.value,
+            email: email.value,
 
-              nationality: nationality.value,
+            nationality: nationality.value,
 
-              scheme: schemeSelect.value,
-            };
+            scheme: schemeSelect.value,
+          };
 
-            /* SAVE */
+          /* SAVE */
 
-            localStorage.setItem(
-              "basicFormData",
+          localStorage.setItem(
+            "basicFormData",
 
-              JSON.stringify(userData),
-            );
+            JSON.stringify(userData),
+          );
 
-            /* SAVE SCHEME */
+          /* SAVE SCHEME */
 
-            localStorage.setItem(
-              "selectedScheme",
+          localStorage.setItem(
+            "selectedScheme",
 
-              schemeSelect.value,
-            );
+            schemeSelect.value,
+          );
 
-            /* SUCCESS */
+          /* SUCCESS */
 
-            alert("✅ Basic Registration Successful");
+          alert("✅ Basic Registration Successful");
 
-            /* REDIRECT */
+          /* REDIRECT */
 
-            window.location.href = "./details-form.html";
-          }
-        },
+          window.location.href = "./details-form.html";
+        }
+      },
 
-        /* END */
-      );
+      /* END */
+    );
 
-      /* =========================================
+    /* =========================================
 ERROR FUNCTION
 ========================================= */
 
-      function showError(input, message) {
-        const inputGroup = input.closest(".input-group");
+    function showError(input, message) {
+      const inputGroup = input.closest(".input-group");
 
-        const errorText = inputGroup.querySelector(".error-text");
+      const errorText = inputGroup.querySelector(".error-text");
 
-        errorText.innerText = message;
-      }
-    </script>
-  </body>
+      errorText.innerText = message;
+    }
+  </script>
+</body>
+
 </html>
