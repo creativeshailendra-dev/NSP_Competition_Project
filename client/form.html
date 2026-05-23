@@ -134,7 +134,7 @@
           </div>
         </div>
 
-      
+
 
         <!-- GENDER -->
 
@@ -253,231 +253,306 @@
   <!-- ========================================= -->
 
   <script>
-    /* =========================================
-GET FORM
-========================================= */
-
-    const basicForm = document.getElementById("basicForm");
 
     /* =========================================
-INPUTS
-========================================= */
+    GET FORM
+    ========================================= */
 
-    const fullName = document.getElementById("fullName");
-
-    const age = document.getElementById("age");
-
-    const gender = document.getElementById("gender");
-
-    const mobile = document.getElementById("mobile");
-
-    const email = document.getElementById("email");
-
-    const nationality = document.getElementById("nationality");
-
-    const schemeSelect = document.getElementById("schemeSelect");
-
-    const terms = document.getElementById("terms");
+    const basicForm =
+      document.getElementById(
+        "basicForm"
+      );
 
     /* =========================================
-FORM SUBMIT
-========================================= */
+    INPUTS
+    ========================================= */
+
+    const fullName =
+      document.getElementById(
+        "fullName"
+      );
+
+    const gender =
+      document.getElementById(
+        "gender"
+      );
+
+    const aadhaarNumber =
+      document.getElementById(
+        "aadhaarNumber"
+      );
+
+    const nationality =
+      document.getElementById(
+        "nationality"
+      );
+
+    const schemeSelect =
+      document.getElementById(
+        "schemeSelect"
+      );
+
+    const terms =
+      document.getElementById(
+        "terms"
+      );
+
+    /* =========================================
+    FORM SUBMIT
+    ========================================= */
 
     basicForm.addEventListener(
+
       "submit",
 
       function (event) {
+
         event.preventDefault();
 
-        /* VALID */
+        /* =====================================
+        VALID FLAG
+        ===================================== */
 
         let isValid = true;
 
-        /* CLEAR OLD ERRORS */
+        /* =====================================
+        CLEAR ERRORS
+        ===================================== */
 
         document
           .querySelectorAll(".error-text")
 
           .forEach((error) => {
+
             error.innerText = "";
+
           });
 
-        /* =========================================
-FULL NAME
-========================================= */
+        /* =====================================
+        FULL NAME
+        ===================================== */
 
-        if (fullName.value.trim() === "") {
+        if (
+
+          fullName.value.trim() === ""
+
+        ) {
+
           showError(
+
             fullName,
 
-            "Full name is required",
+            "Full Name is required"
+
           );
 
           isValid = false;
+
         }
 
-        /* =========================================
-AGE
-========================================= */
+        /* =====================================
+        GENDER
+        ===================================== */
 
-        if (age.value === "") {
+        if (
+
+          gender.value === ""
+
+        ) {
+
           showError(
-            age,
 
-            "Please select age",
-          );
-
-          isValid = false;
-        }
-
-        /* =========================================
-GENDER
-========================================= */
-
-        if (gender.value === "") {
-          showError(
             gender,
 
-            "Please select gender",
+            "Please select gender"
+
           );
 
           isValid = false;
+
         }
 
-        /* =========================================
-MOBILE
-========================================= */
+        /* =====================================
+        AADHAAR
+        ===================================== */
 
-        const mobilePattern = /^[0-9]{10}$/;
+        const aadhaarPattern =
+          /^[0-9]{12}$/;
 
-        if (!mobilePattern.test(mobile.value)) {
+        if (
+
+          !aadhaarPattern.test(
+            aadhaarNumber.value
+          )
+
+        ) {
+
           showError(
-            mobile,
 
-            "Enter valid 10 digit number",
+            aadhaarNumber,
+
+            "Enter valid 12 digit Aadhaar Number"
+
           );
 
           isValid = false;
+
         }
 
-        /* =========================================
-EMAIL
-========================================= */
+        /* =====================================
+        NATIONALITY
+        ===================================== */
 
-        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (
 
-        if (!emailPattern.test(email.value)) {
+          nationality.value === ""
+
+        ) {
+
           showError(
-            email,
 
-            "Enter valid email",
-          );
-
-          isValid = false;
-        }
-
-        /* =========================================
-NATIONALITY
-========================================= */
-
-        if (nationality.value === "") {
-          showError(
             nationality,
 
-            "Please select nationality",
+            "Please select nationality"
+
           );
 
           isValid = false;
+
         }
 
-        /* =========================================
-SCHEME
-========================================= */
+        /* =====================================
+        SCHEME
+        ===================================== */
 
-        if (schemeSelect.value === "") {
+        if (
+
+          schemeSelect.value === ""
+
+        ) {
+
           showError(
+
             schemeSelect,
 
-            "Please select scheme",
+            "Please select competition"
+
           );
 
           isValid = false;
+
         }
 
-        /* =========================================
-TERMS
-========================================= */
+        /* =====================================
+        TERMS
+        ===================================== */
 
-        if (!terms.checked) {
-          document.querySelector(".checkbox-error").innerText =
+        if (
+
+          !terms.checked
+
+        ) {
+
+          document.querySelector(
+            ".checkbox-error"
+          ).innerText =
             "Please accept terms";
 
           isValid = false;
+
         }
 
-        /* =========================================
-SUCCESS
-========================================= */
+        /* =====================================
+        SUCCESS
+        ===================================== */
 
         if (isValid) {
+
           /* USER DATA */
 
           const userData = {
-            fullName: fullName.value,
 
-            age: age.value,
+            fullName:
+              fullName.value,
 
-            gender: gender.value,
+            gender:
+              gender.value,
 
-            mobile: mobile.value,
+            aadhaarNumber:
+              aadhaarNumber.value,
 
-            email: email.value,
+            nationality:
+              nationality.value,
 
-            nationality: nationality.value,
+            scheme:
+              schemeSelect.value,
 
-            scheme: schemeSelect.value,
           };
 
-          /* SAVE */
+          /* SAVE LOCAL STORAGE */
 
           localStorage.setItem(
+
             "basicFormData",
 
-            JSON.stringify(userData),
+            JSON.stringify(userData)
+
           );
 
           /* SAVE SCHEME */
 
           localStorage.setItem(
+
             "selectedScheme",
 
-            schemeSelect.value,
+            schemeSelect.value
+
           );
 
-          /* SUCCESS */
+          /* SUCCESS ALERT */
 
-          alert("✅ Basic Registration Successful");
+          alert(
+            "✅ Basic Registration Successful"
+          );
 
           /* REDIRECT */
 
-          window.location.href = "./details-form.html";
-        }
-      },
+          window.location.href =
+            "./details-form.html";
 
-      /* END */
+        }
+
+      }
+
     );
 
     /* =========================================
-ERROR FUNCTION
-========================================= */
+    ERROR FUNCTION
+    ========================================= */
 
-    function showError(input, message) {
-      const inputGroup = input.closest(".input-group");
+    function showError(
 
-      const errorText = inputGroup.querySelector(".error-text");
+      input,
 
-      errorText.innerText = message;
+      message
+
+    ) {
+
+      const inputGroup =
+        input.closest(
+          ".input-group"
+        );
+
+      const errorText =
+        inputGroup.querySelector(
+          ".error-text"
+        );
+
+      errorText.innerText =
+        message;
+
     }
+
   </script>
 </body>
 
