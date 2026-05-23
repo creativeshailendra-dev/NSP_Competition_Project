@@ -1,69 +1,69 @@
 const upload = require("../middleware/uploadMiddleware");
+
 const express = require("express");
 
 const router = express.Router();
 
-// ========================================
-// IMPORT CONTROLLER
-// ========================================
+/* ========================================
+IMPORT CONTROLLER
+======================================== */
 
 const {
 
-    registerCandidate,
+  registerCandidate,
 
-    getCandidateStatus
+  getCandidateStatus,
 
-} = require(
-    "../controllers/candidateController"
-);
+} = require("../controllers/candidateController");
 
-// ========================================
-// REGISTER ROUTE
-// ========================================
+/* ========================================
+REGISTER ROUTE
+======================================== */
 
 router.post(
-    "/register",
 
-    upload.fields([
-        {
-            name: "passportPhoto",
-            maxCount: 1,
-        },
+  "/register",
 
-        {
-            name: "signature",
-            maxCount: 1,
-        },
+  upload.fields([
 
-        {
-            name: "idProof",
-            maxCount: 1,
-        },
+    {
+      name: "passportPhoto",
+      maxCount: 1,
+    },
 
-        {
-            name: "qualificationCertificate",
+    {
+      name: "signature",
+      maxCount: 1,
+    },
 
-            maxCount: 1,
-        },
-    ]),
+    {
+      name: "idProof",
+      maxCount: 1,
+    },
 
-    registerCandidate,
+    {
+      name: "qualificationCertificate",
+      maxCount: 1,
+    },
+
+  ]),
+
+  registerCandidate
 );
 
-// ========================================
-// TRACK APPLICATION STATUS
-// ========================================
+/* ========================================
+TRACK APPLICATION STATUS
+======================================== */
 
 router.get(
 
-    "/:registrationId",
+  "/track/:registrationId",
 
-    getCandidateStatus
-
+  getCandidateStatus
 );
 
-// ========================================
-// EXPORT ROUTER
-// ========================================
+/* ========================================
+EXPORT ROUTER
+======================================== */
 
 module.exports = router;

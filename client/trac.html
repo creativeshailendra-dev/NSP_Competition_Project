@@ -170,71 +170,146 @@
     </section>
 
     <script>
-      /* ====================================
+
+/* ====================================
 TRACK BUTTON
 ==================================== */
 
-      const trackBtn = document.getElementById("trackBtn");
+const trackBtn =
+  document.getElementById("trackBtn");
 
-      /* ====================================
+/* ====================================
 CLICK EVENT
 ==================================== */
 
-      trackBtn.addEventListener(
-        "click",
+trackBtn.addEventListener(
 
-        () => {
-          /* REGISTRATION ID */
+  "click",
 
-          const registrationId =
-            document.getElementById("registrationId").value;
+  async () => {
 
-          /* VALIDATION */
+    /* ====================================
+    GET INPUT
+    ==================================== */
 
-          if (!registrationId) {
-            alert("Please Enter Registration ID");
+    const registrationId =
+      document
+        .getElementById("registrationId")
+        .value
+        .trim();
 
-            return;
-          }
+    /* ====================================
+    VALIDATION
+    ==================================== */
 
-          /* GET DATA */
+    if (!registrationId) {
 
-          const candidate = JSON.parse(localStorage.getItem("candidateData"));
+      alert("Please Enter Registration ID");
 
-          /* CHECK */
+      return;
 
-          if (candidate && candidate.registrationId === registrationId) {
-            /* SHOW RESULT */
+    }
 
-            document.getElementById("resultBox").style.display = "block";
+    try {
 
-            /* FILL DATA */
+      /* ====================================
+      FETCH DATA FROM BACKEND
+      ==================================== */
 
-            document.getElementById("candidateName").innerText =
-              candidate.fullName || "N/A";
+      const response = await fetch(
 
-            document.getElementById("candidateRegId").innerText =
-              candidate.registrationId || "N/A";
+        `https://nsp-backend-jx1j.onrender.com/api/candidates/track/${registrationId}`
 
-            document.getElementById("candidateMobile").innerText =
-              candidate.mobile || "N/A";
-
-            document.getElementById("candidateScheme").innerText =
-              candidate.scheme || "N/A";
-
-            document.getElementById("applicationStatus").innerText =
-              candidate.applicationStatus || "Pending Verification";
-
-            document.getElementById("paymentStatus").innerText =
-              candidate.paymentStatus || "Pending";
-
-            document.getElementById("submissionDate").innerText =
-              candidate.submissionDate || "N/A";
-          } else {
-            alert("❌ Application Not Found");
-          }
-        },
       );
-    </script>
+
+      const data =
+        await response.json();
+
+      console.log(data);
+
+      /* ====================================
+      NOT FOUND
+      ==================================== */
+
+      if (!data.success) {
+
+        alert("❌ Application Not Found");
+
+        return;
+
+      }
+
+      /* ====================================
+      CANDIDATE DATA
+      ==================================== */
+
+      const candidate =
+        data.candidate;
+
+      /* ====================================
+      SHOW RESULT BOX
+      ==================================== */
+
+      document.getElementById(
+        "resultBox"
+      ).style.display = "block";
+
+      /* ====================================
+      FILL DATA
+      ==================================== */
+
+      document.getElementById(
+        "candidateName"
+      ).innerText =
+        candidate.fullName || "N/A";
+
+      document.getElementById(
+        "candidateRegId"
+      ).innerText =
+        candidate.registrationId || "N/A";
+
+      document.getElementById(
+        "candidateMobile"
+      ).innerText =
+        candidate.mobile || "N/A";
+
+      document.getElementById(
+        "candidateScheme"
+      ).innerText =
+        candidate.schemeCategory || "N/A";
+
+      document.getElementById(
+        "applicationStatus"
+      ).innerText =
+        candidate.applicationStatus || "Pending";
+
+      document.getElementById(
+        "paymentStatus"
+      ).innerText =
+        candidate.paymentStatus || "Pending";
+
+      document.getElementById(
+        "submissionDate"
+      ).innerText =
+
+        new Date(
+          candidate.createdAt
+        ).toLocaleDateString();
+
+    }
+
+    catch (error) {
+
+      console.log(error);
+
+      alert("❌ Server Error");
+
+    }
+
+  }
+
+);
+
+</script>
   </body>
 </html>
